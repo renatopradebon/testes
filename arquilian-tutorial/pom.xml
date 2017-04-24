@@ -13,6 +13,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<browser>phantomjs</browser> <!-- PhantomJS will be our default browser if no profile is specified -->
 	</properties>
 	<!-- clip -->
 	<dependencyManagement>
@@ -45,6 +46,15 @@
 			</plugin>
 			<!-- clip -->
 		</plugins>
+		<!-- clip -->
+		<!-- test resource filtering evaluates ${browser} expression in arquillian.xml -->
+		<testResources>
+			<testResource>
+				<directory>src/test/resources</directory>
+				<filtering>true</filtering>
+			</testResource>
+		</testResources>
+		<!-- clip -->
 	</build>
 	<dependencies>
 		<dependency>
@@ -108,5 +118,59 @@
 			<version>1.6.4</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.jboss.arquillian</groupId>
+			<artifactId>arquillian-bom</artifactId>
+			<version>1.1.11.Final</version>
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency>
+		<dependency>                                      <!-- Selenium bom is optional - see note below -->
+			<groupId>org.jboss.arquillian.selenium</groupId>
+			<artifactId>selenium-bom</artifactId>
+			<version>2.53.1</version>
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.arquillian.extension</groupId>
+			<artifactId>arquillian-drone-bom</artifactId>
+			<version>2.0.1.Final</version>
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.arquillian.graphene</groupId>
+			<artifactId>graphene-webdriver</artifactId>
+			<version>2.1.0.Final</version>
+			<type>pom</type>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.wildfly.arquillian</groupId>
+			<artifactId>wildfly-arquillian-container-remote</artifactId>
+			<version>2.0.0.Final</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
+
+	<!-- clip -->
+	<profiles>
+		<profile>
+			<id>firefox</id>
+			<properties>
+				<browser>firefox</browser>
+			</properties>
+		</profile>
+		<profile>
+			<id>chrome</id>
+			<properties>
+				<browser>chrome</browser>
+			</properties>
+		</profile>
+
+		<!-- feel free to add any other browser you like -->
+	</profiles>
+
+
 </project>
