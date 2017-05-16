@@ -3,7 +3,7 @@ package py.com.datapar.artifactory;
 
 import org.jfrog.artifactory.client.ArtifactoryClient;
 
-import java.io.*;
+import java.io.IOException;
 
 import static py.com.datapar.artifactory.Constants.*;
 
@@ -11,39 +11,33 @@ public class TesteJfrog {
 
     public static void main(String[] args) throws IOException {
 
-        ClienteArtifactoryAcoes clienteArtifactoryAcoes = new ClienteArtifactoryAcoes().clienteArtifactoryJava(
+        ClienteArtifactoryAcoes clienteArtifactoryAcoesUpload = new ClienteArtifactoryAcoes().clienteArtifactoryJava(
                 new ArtifactoryClientJava()
-                        .artifactory(ArtifactoryClient.create(URL_ARTIFACTORY, USUARIO_ARTIFACTORY, SENHA_ARTIFACTORY))
+                        .artifactory(ArtifactoryClient.create(CLIENT_ARTIFACTORY_URL, CLIENT_ARTIFACTORY_USERNAME, CLIENT_ARTIFACTORY_PASSWORD))
                         .fileName("teste-jfrog-client.txt")
                         .pathLocalFile("teste-renato")
                         .pathRemoteFile("arquivos")
-                        .property(new String[]{"teste", "renato"}));
+                        .property(new String[]{"teste", "alexandre"})
+        );
+
+//        clienteArtifactoryAcoesUpload.realizaUpload();
+
+        ClienteArtifactoryAcoes clienteArtifactoryAcoesDownload = new ClienteArtifactoryAcoes().clienteArtifactoryJava(
+                new ArtifactoryClientJava()
+                        .artifactory(ArtifactoryClient.create(CLIENT_ARTIFACTORY_URL, CLIENT_ARTIFACTORY_USERNAME, CLIENT_ARTIFACTORY_PASSWORD))
+                        .fileName("teste-jfrog-client.txt")
+                        .pathLocalFile("teste-renato\\baixados")
+                        .pathRemoteFile("arquivos")
+                        .property(new String[]{"teste", "renato"})
+        );
+
+//        clienteArtifactoryAcoesDownload.realizaDownload();
 
 
-        clienteArtifactoryAcoes.realizaUpload();
-//        dowloadFile(artifactory);
-
+        "hey duke".chars().forEach(c -> System.out.println((char)c));
+        System.out.println("---------------------------");
+        "hey duke".chars().parallel().forEach(c -> System.out.println((char) c));
 
         System.out.println("Done");
-    }
-
-
-    public static void dowloadFile(ArtifactoryClientJava artifactory) throws IOException {
-
-        InputStream iStream = artifactory.getArtifactory().repository(REPOSITORY_NOME)
-                .download("teste-jfrog-client.txt")
-                .withProperty("teste", "joao")
-                .doDownload();
-
-        OutputStream outputStream =
-                new FileOutputStream(new File(PATH_ARQUIVOS + "\\teste-jfrog-client-download.txt"));
-
-        int read = 0;
-        byte[] bytes = new byte[1024];
-
-        while ((read = iStream.read(bytes)) != -1) {
-            outputStream.write(bytes, 0, read);
-        }
-
     }
 }
