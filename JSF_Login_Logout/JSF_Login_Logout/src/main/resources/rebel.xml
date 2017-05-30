@@ -13,11 +13,6 @@
 
 	<web>
 		<link target="/">
-			<dir name="C:/git-repository/renato/testes/JSF_Login_Logout/JSF_Login_Logout/target/m2e-wtp/web-resources">
-				<exclude name="/"/>
-			</dir>
-		</link>
-		<link target="/">
 			<dir name="C:/git-repository/renato/testes/JSF_Login_Logout/JSF_Login_Logout/src/main/webapp">
 			</dir>
 		</link>
