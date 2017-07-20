@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="py.com.datapar.platform_platform_war_0.0.1-SNAPSHOTPU" transaction-type="JTA">
+    <jta-data-source>java:/jboss/datasources/ExampleDS [jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE]</jta-data-source>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties/>
+  </persistence-unit>
+  <persistence-unit name="DEFAULT_PU" transaction-type="JTA">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>py.com.datapar.maestro.domain.controller.ConfigSchemaAppRevision</class>
+    <class>py.com.datapar.maestro.domain.controller.DeliveryOrderAlvoServico</class>
+    <class>py.com.datapar.maestro.domain.controller.Artefato</class>
+    <class>py.com.datapar.maestro.domain.controller.EstagioExecucaoEntrega</class>
+    <class>py.com.datapar.maestro.domain.controller.PlanoClassificador</class>
+    <class>py.com.datapar.maestro.domain.controller.Cliente</class>
+    <class>py.com.datapar.maestro.domain.controller.ConfigSchemaDbRevision</class>
+    <class>py.com.datapar.maestro.domain.controller.Conteudo</class>
+    <class>py.com.datapar.maestro.domain.controller.Servico</class>
+    <class>py.com.datapar.maestro.domain.controller.ServicoDb</class>
+    <class>py.com.datapar.maestro.domain.controller.Empresa</class>
+    <class>py.com.datapar.maestro.domain.controller.Produto</class>
+    <class>py.com.datapar.maestro.domain.controller.Entrega</class>
+    <class>py.com.datapar.maestro.domain.controller.Filial</class>
+    <class>py.com.datapar.maestro.domain.controller.Servidor</class>
+    <class>py.com.datapar.maestro.domain.controller.ConteudoDb</class>
+    <class>py.com.datapar.maestro.domain.controller.ProdutoDbRevision</class>
+    <class>py.com.datapar.maestro.domain.controller.ProdutoAppVersao</class>
+    <class>py.com.datapar.maestro.domain.controller.ServicoApp</class>
+    <class>py.com.datapar.maestro.domain.controller.ConteudoApp</class>
+    <class>py.com.datapar.maestro.domain.controller.EntregaAlvo</class>
+    <class>py.com.datapar.maestro.domain.controller.ConteudoCommand</class>
+    <class>py.com.datapar.maestro.domain.controller.Plano</class>
+    <class>py.com.datapar.maestro.domain.controller.MaestroAppConfig</class>
+    <class>py.com.datapar.maestro.domain.controller.Usuario</class>
+    <class>py.com.datapar.maestro.domain.controller.DeliveryOrder</class>
+    <class>py.com.datapar.maestro.domain.controller.ConfigSchema</class>
+    <class>py.com.datapar.maestro.domain.controller.User</class>
+    <class>py.com.datapar.maestro.domain.controller.Authority</class>
+    <class>py.com.datapar.maestro.domain.ConfigSchemaAppRevision</class>
+    <class>py.com.datapar.maestro.domain.DeliveryOrderAlvoServico</class>
+    <class>py.com.datapar.maestro.domain.Artefato</class>
+    <class>py.com.datapar.maestro.domain.EstagioExecucaoEntrega</class>
+    <class>py.com.datapar.maestro.domain.PlanoClassificador</class>
+    <class>py.com.datapar.maestro.domain.Cliente</class>
+    <class>py.com.datapar.maestro.domain.ConfigSchemaDbRevision</class>
+    <class>py.com.datapar.maestro.domain.Conteudo</class>
+    <class>py.com.datapar.maestro.domain.Servico</class>
+    <class>py.com.datapar.maestro.domain.ServicoDb</class>
+    <class>py.com.datapar.maestro.domain.Empresa</class>
+    <class>py.com.datapar.maestro.domain.Produto</class>
+    <class>py.com.datapar.maestro.domain.Entrega</class>
+    <class>py.com.datapar.maestro.domain.Filial</class>
+    <class>py.com.datapar.maestro.domain.Servidor</class>
+    <class>py.com.datapar.maestro.domain.ConteudoDb</class>
+    <class>py.com.datapar.maestro.domain.ProdutoDbRevision</class>
+    <class>py.com.datapar.maestro.domain.ProdutoAppVersao</class>
+    <class>py.com.datapar.maestro.domain.ServicoApp</class>
+    <class>py.com.datapar.maestro.domain.ConteudoApp</class>
+    <class>py.com.datapar.maestro.domain.EntregaAlvo</class>
+    <class>py.com.datapar.maestro.domain.ConteudoCommand</class>
+    <class>py.com.datapar.maestro.domain.Plano</class>
+    <class>py.com.datapar.maestro.domain.MaestroAppConfig</class>
+    <class>py.com.datapar.maestro.domain.Usuario</class>
+    <class>py.com.datapar.maestro.domain.DeliveryOrder</class>
+    <class>py.com.datapar.maestro.domain.ConfigSchema</class>
+    <class>py.com.datapar.maestro.domain.User</class>
+    <class>py.com.datapar.maestro.domain.Authority</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+      <property name="javax.persistence.sql-load-script-source" value="META-INF/sql/insert.sql"/>
+    </properties>
+  </persistence-unit>
+</persistence>

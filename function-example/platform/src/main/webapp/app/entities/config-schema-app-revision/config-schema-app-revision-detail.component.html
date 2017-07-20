@@ -1,0 +1,37 @@
+
+<div *ngIf="configSchemaAppRevision">
+    <h2><span jhiTranslate="platform.configSchemaAppRevision.detail.title">Config Schema App Revision</span> {{configSchemaAppRevision.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="platform.configSchemaAppRevision.dataUpdated">Data Updated</span></dt>
+        <dd>
+            <span>{{configSchemaAppRevision.dataUpdated}}</span>
+        </dd>
+        <dt><span jhiTranslate="platform.configSchemaAppRevision.produtoAppVersao">Produto App Versao</span></dt>
+        <dd>
+            <div *ngIf="configSchemaAppRevision.produtoAppVersao">
+                <a [routerLink]="['/produto-app-versao', configSchemaAppRevision.produtoAppVersao?.id]">{{configSchemaAppRevision.produtoAppVersao?.id}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="platform.configSchemaAppRevision.configSchema">Config Schema</span></dt>
+        <dd>
+            <div *ngIf="configSchemaAppRevision.configSchema">
+                <a [routerLink]="['/config-schema', configSchemaAppRevision.configSchema?.id]">{{configSchemaAppRevision.configSchema?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'config-schema-app-revision/'+ configSchemaAppRevision.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

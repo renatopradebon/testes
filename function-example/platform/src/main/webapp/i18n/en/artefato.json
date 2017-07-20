@@ -1,0 +1,26 @@
+{
+    "platform": {
+        "artefato" : {
+            "home": {
+                "title": "Artefatoes",
+                "createLabel": "Create a new Artefato",
+                "createOrEditLabel": "Create or edit a Artefato"
+            },
+            "created": "A new Artefato is created with identifier {{ param }}",
+            "updated": "A Artefato is updated with identifier {{ param }}",
+            "deleted": "A Artefato is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Artefato {{ id }}?"
+            },
+            "detail": {
+                "title": "Artefato"
+            },
+            "nome": "Nome",
+            "extensao": "Extensao",
+            "fileUri": "File Uri",
+            "versao": "Versao",
+            "sha1": "Sha1",
+            "versoes": "Versoes"
+        }
+    }
+}

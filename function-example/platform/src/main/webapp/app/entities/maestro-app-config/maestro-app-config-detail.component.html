@@ -1,0 +1,31 @@
+
+<div *ngIf="maestroAppConfig">
+    <h2><span jhiTranslate="platform.maestroAppConfig.detail.title">Maestro App Config</span> {{maestroAppConfig.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="platform.maestroAppConfig.maestroplatURI">Maestroplat URI</span></dt>
+        <dd>
+            <span>{{maestroAppConfig.maestroplatURI}}</span>
+        </dd>
+        <dt><span jhiTranslate="platform.maestroAppConfig.servicoMaestroApp">Servico Maestro App</span></dt>
+        <dd>
+            <div *ngIf="maestroAppConfig.servicoMaestroApp">
+                <a [routerLink]="['/servico-app', maestroAppConfig.servicoMaestroApp?.id]">{{maestroAppConfig.servicoMaestroApp?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'maestro-app-config/'+ maestroAppConfig.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

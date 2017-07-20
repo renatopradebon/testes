@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.omnifaces:soteria:1.0-m01-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/omnifaces/soteria/1.0-m01-SNAPSHOT/soteria-1.0-m01-20160205.223508-2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/omnifaces/soteria/1.0-m01-SNAPSHOT/soteria-1.0-m01-20160205.223508-2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/omnifaces/soteria/1.0-m01-SNAPSHOT/soteria-1.0-m01-20160205.223508-2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

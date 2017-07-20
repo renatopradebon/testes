@@ -1,0 +1,22 @@
+{
+    "platform": {
+        "maestroAppConfig" : {
+            "home": {
+                "title": "Maestro App Configs",
+                "createLabel": "Create a new Maestro App Config",
+                "createOrEditLabel": "Create or edit a Maestro App Config"
+            },
+            "created": "A new Maestro App Config is created with identifier {{ param }}",
+            "updated": "A Maestro App Config is updated with identifier {{ param }}",
+            "deleted": "A Maestro App Config is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Maestro App Config {{ id }}?"
+            },
+            "detail": {
+                "title": "Maestro App Config"
+            },
+            "maestroplatURI": "Maestroplat URI",
+            "servicoMaestroApp": "Servico Maestro App"
+        }
+    }
+}

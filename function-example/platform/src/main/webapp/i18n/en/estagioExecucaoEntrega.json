@@ -1,0 +1,23 @@
+{
+    "platform": {
+        "estagioExecucaoEntrega" : {
+            "home": {
+                "title": "Estagio Execucao Entregas",
+                "createLabel": "Create a new Estagio Execucao Entrega",
+                "createOrEditLabel": "Create or edit a Estagio Execucao Entrega"
+            },
+            "created": "A new Estagio Execucao Entrega is created with identifier {{ param }}",
+            "updated": "A Estagio Execucao Entrega is updated with identifier {{ param }}",
+            "deleted": "A Estagio Execucao Entrega is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Estagio Execucao Entrega {{ id }}?"
+            },
+            "detail": {
+                "title": "Estagio Execucao Entrega"
+            },
+            "planoClassificador": "Plano Classificador",
+            "entrega": "Entrega",
+            "alvos": "Alvos"
+        }
+    }
+}

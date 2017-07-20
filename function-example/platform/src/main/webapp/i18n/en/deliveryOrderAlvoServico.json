@@ -1,0 +1,22 @@
+{
+    "platform": {
+        "deliveryOrderAlvoServico" : {
+            "home": {
+                "title": "Delivery Order Alvo Servicoes",
+                "createLabel": "Create a new Delivery Order Alvo Servico",
+                "createOrEditLabel": "Create or edit a Delivery Order Alvo Servico"
+            },
+            "created": "A new Delivery Order Alvo Servico is created with identifier {{ param }}",
+            "updated": "A Delivery Order Alvo Servico is updated with identifier {{ param }}",
+            "deleted": "A Delivery Order Alvo Servico is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Delivery Order Alvo Servico {{ id }}?"
+            },
+            "detail": {
+                "title": "Delivery Order Alvo Servico"
+            },
+            "configSchema": "Config Schema",
+            "deliveryOrder": "Delivery Order"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "platform": {
+        "produtoAppVersao" : {
+            "home": {
+                "title": "Produto App Versaoes",
+                "createLabel": "Create a new Produto App Versao",
+                "createOrEditLabel": "Create or edit a Produto App Versao"
+            },
+            "created": "A new Produto App Versao is created with identifier {{ param }}",
+            "updated": "A Produto App Versao is updated with identifier {{ param }}",
+            "deleted": "A Produto App Versao is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Produto App Versao {{ id }}?"
+            },
+            "detail": {
+                "title": "Produto App Versao"
+            },
+            "versaoProduto": "Versao Produto",
+            "revisaoMinimaDB": "Revisao Minima DB",
+            "ordemExecucao": "Ordem Execucao",
+            "produto": "Produto",
+            "artefatos": "Artefatos"
+        }
+    }
+}

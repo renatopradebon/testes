@@ -1,0 +1,74 @@
+<div>
+    <h2>
+        <span jhiTranslate="platform.deliveryOrderAlvoServico.home.title">Delivery Order Alvo Servicoes</span>
+        <button class="btn btn-primary float-right create-delivery-order-alvo-servico" [routerLink]="['/', { outlets: { popup: ['delivery-order-alvo-servico-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="platform.deliveryOrderAlvoServico.home.createLabel">
+            Create new Delivery Order Alvo Servico
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="deliveryOrderAlvoServicoes">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="configSchema.id"><span jhiTranslate="platform.deliveryOrderAlvoServico.configSchema">Config Schema</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="deliveryOrder.id"><span jhiTranslate="platform.deliveryOrderAlvoServico.deliveryOrder">Delivery Order</span> <span class="fa fa-sort"></span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let deliveryOrderAlvoServico of deliveryOrderAlvoServicoes ;trackBy: trackId">
+                <td><a [routerLink]="['../delivery-order-alvo-servico', deliveryOrderAlvoServico.id ]">{{deliveryOrderAlvoServico.id}}</a></td>
+                <td>
+                    <div *ngIf="deliveryOrderAlvoServico.configSchema">
+                        <a [routerLink]="['../config-schema', deliveryOrderAlvoServico.configSchema?.id ]" >{{deliveryOrderAlvoServico.configSchema?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="deliveryOrderAlvoServico.deliveryOrder">
+                        <a [routerLink]="['../delivery-order', deliveryOrderAlvoServico.deliveryOrder?.id ]" >{{deliveryOrderAlvoServico.deliveryOrder?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../delivery-order-alvo-servico', deliveryOrderAlvoServico.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'delivery-order-alvo-servico/'+ deliveryOrderAlvoServico.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'delivery-order-alvo-servico/'+ deliveryOrderAlvoServico.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+        <div *ngIf="deliveryOrderAlvoServicoes && deliveryOrderAlvoServicoes.length">
+            <div class="row justify-content-center">
+                <jhi-item-count [page]="page" [total]="queryCount" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+            </div>
+            <div class="row justify-content-center">
+                <ngb-pagination [collectionSize]="totalItems" [(page)]="page" (pageChange)="loadPage(page)"></ngb-pagination>
+            </div>
+        </div>
+</div>

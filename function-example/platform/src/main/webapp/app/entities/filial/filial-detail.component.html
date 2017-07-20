@@ -1,0 +1,35 @@
+
+<div *ngIf="filial">
+    <h2><span jhiTranslate="platform.filial.detail.title">Filial</span> {{filial.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="platform.filial.codigo">Codigo</span></dt>
+        <dd>
+            <span>{{filial.codigo}}</span>
+        </dd>
+        <dt><span jhiTranslate="platform.filial.nome">Nome</span></dt>
+        <dd>
+            <span>{{filial.nome}}</span>
+        </dd>
+        <dt><span jhiTranslate="platform.filial.empresa">Empresa</span></dt>
+        <dd>
+            <div *ngIf="filial.empresa">
+                <a [routerLink]="['/empresa', filial.empresa?.id]">{{filial.empresa?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'filial/'+ filial.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

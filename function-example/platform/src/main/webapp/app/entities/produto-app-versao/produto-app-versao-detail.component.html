@@ -1,0 +1,45 @@
+
+<div *ngIf="produtoAppVersao">
+    <h2><span jhiTranslate="platform.produtoAppVersao.detail.title">Produto App Versao</span> {{produtoAppVersao.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="platform.produtoAppVersao.versaoProduto">Versao Produto</span></dt>
+        <dd>
+            <span>{{produtoAppVersao.versaoProduto}}</span>
+        </dd>
+        <dt><span jhiTranslate="platform.produtoAppVersao.revisaoMinimaDB">Revisao Minima DB</span></dt>
+        <dd>
+            <span>{{produtoAppVersao.revisaoMinimaDB}}</span>
+        </dd>
+        <dt><span jhiTranslate="platform.produtoAppVersao.ordemExecucao">Ordem Execucao</span></dt>
+        <dd>
+            <span>{{produtoAppVersao.ordemExecucao}}</span>
+        </dd>
+        <dt><span jhiTranslate="platform.produtoAppVersao.produto">Produto</span></dt>
+        <dd>
+            <div *ngIf="produtoAppVersao.produto">
+                <a [routerLink]="['/produto', produtoAppVersao.produto?.id]">{{produtoAppVersao.produto?.id}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="platform.produtoAppVersao.artefatos">Artefatos</span></dt>
+        <dd>
+            <span *ngFor="let artefatos of produtoAppVersao.artefatos; let last = last">
+                <a [routerLink]="['/artefato', artefatos?.id ]">{{artefatos.id}}</a>{{last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'produto-app-versao/'+ produtoAppVersao.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

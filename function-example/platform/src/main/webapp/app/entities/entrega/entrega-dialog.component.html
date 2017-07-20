@@ -1,0 +1,56 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myEntregaLabel" jhiTranslate="platform.entrega.home.createOrEditLabel">Create or edit a Entrega</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!entrega.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="entrega.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="platform.entrega.codinomeEntrega" for="field_codinomeEntrega">Codinome Entrega</label>
+            <input type="text" class="form-control" name="codinomeEntrega" id="field_codinomeEntrega"
+                [(ngModel)]="entrega.codinomeEntrega"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="platform.entrega.dataCriacao" for="field_dataCriacao">Data Criacao</label>
+            <input type="text" class="form-control" name="dataCriacao" id="field_dataCriacao"
+                [(ngModel)]="entrega.dataCriacao"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="platform.entrega.dataFinalizacao" for="field_dataFinalizacao">Data Finalizacao</label>
+            <input type="text" class="form-control" name="dataFinalizacao" id="field_dataFinalizacao"
+                [(ngModel)]="entrega.dataFinalizacao"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="platform.entrega.usuarioCriacao" for="field_usuarioCriacao">Usuario Criacao</label>
+            <input type="text" class="form-control" name="usuarioCriacao" id="field_usuarioCriacao"
+                [(ngModel)]="entrega.usuarioCriacao"
+             />
+        </div>
+
+        <div class="form-group">
+            <label jhiTranslate="platform.entrega.plano" for="field_plano">Plano</label>
+            <select class="form-control" id="field_plano" name="plano" [(ngModel)]="entrega.plano" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="planoOption.id === entrega.plano?.id ? entrega.plano : planoOption" *ngFor="let planoOption of planoes; trackBy: trackPlanoById">{{planoOption.id}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,72 @@
+<div>
+    <h2>
+        <span jhiTranslate="platform.produtoDbRevision.home.title">Produto Db Revisions</span>
+        <button class="btn btn-primary float-right create-produto-db-revision" [routerLink]="['/', { outlets: { popup: ['produto-db-revision-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="platform.produtoDbRevision.home.createLabel">
+            Create new Produto Db Revision
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="produtoDbRevisions">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="revisaoBanco"><span jhiTranslate="platform.produtoDbRevision.revisaoBanco">Revisao Banco</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="ordemExecucao"><span jhiTranslate="platform.produtoDbRevision.ordemExecucao">Ordem Execucao</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="produto.id"><span jhiTranslate="platform.produtoDbRevision.produto">Produto</span> <span class="fa fa-sort"></span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let produtoDbRevision of produtoDbRevisions ;trackBy: trackId">
+                <td><a [routerLink]="['../produto-db-revision', produtoDbRevision.id ]">{{produtoDbRevision.id}}</a></td>
+                <td>{{produtoDbRevision.revisaoBanco}}</td>
+                <td>{{produtoDbRevision.ordemExecucao}}</td>
+                <td>
+                    <div *ngIf="produtoDbRevision.produto">
+                        <a [routerLink]="['../produto', produtoDbRevision.produto?.id ]" >{{produtoDbRevision.produto?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../produto-db-revision', produtoDbRevision.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'produto-db-revision/'+ produtoDbRevision.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'produto-db-revision/'+ produtoDbRevision.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+        <div *ngIf="produtoDbRevisions && produtoDbRevisions.length">
+            <div class="row justify-content-center">
+                <jhi-item-count [page]="page" [total]="queryCount" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+            </div>
+            <div class="row justify-content-center">
+                <ngb-pagination [collectionSize]="totalItems" [(page)]="page" (pageChange)="loadPage(page)"></ngb-pagination>
+            </div>
+        </div>
+</div>

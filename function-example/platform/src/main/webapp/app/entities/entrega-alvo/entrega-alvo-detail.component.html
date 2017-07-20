@@ -1,0 +1,55 @@
+
+<div *ngIf="entregaAlvo">
+    <h2><span jhiTranslate="platform.entregaAlvo.detail.title">Entrega Alvo</span> {{entregaAlvo.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="platform.entregaAlvo.requerAutorizacao">Requer Autorizacao</span></dt>
+        <dd>
+            <span>{{entregaAlvo.requerAutorizacao}}</span>
+        </dd>
+        <dt><span jhiTranslate="platform.entregaAlvo.autorizado">Autorizado</span></dt>
+        <dd>
+            <span>{{entregaAlvo.autorizado}}</span>
+        </dd>
+        <dt><span jhiTranslate="platform.entregaAlvo.autorizadoPor">Autorizado Por</span></dt>
+        <dd>
+            <span>{{entregaAlvo.autorizadoPor}}</span>
+        </dd>
+        <dt><span jhiTranslate="platform.entregaAlvo.dataAgendamento">Data Agendamento</span></dt>
+        <dd>
+            <span>{{entregaAlvo.dataAgendamento}}</span>
+        </dd>
+        <dt><span jhiTranslate="platform.entregaAlvo.empresa">Empresa</span></dt>
+        <dd>
+            <div *ngIf="entregaAlvo.empresa">
+                <a [routerLink]="['/empresa', entregaAlvo.empresa?.id]">{{entregaAlvo.empresa?.id}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="platform.entregaAlvo.deliveryOrder">Delivery Order</span></dt>
+        <dd>
+            <div *ngIf="entregaAlvo.deliveryOrder">
+                <a [routerLink]="['/delivery-order', entregaAlvo.deliveryOrder?.id]">{{entregaAlvo.deliveryOrder?.id}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="platform.entregaAlvo.estagio">Estagio</span></dt>
+        <dd>
+            <div *ngIf="entregaAlvo.estagio">
+                <a [routerLink]="['/estagio-execucao-entrega', entregaAlvo.estagio?.id]">{{entregaAlvo.estagio?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'entrega-alvo/'+ entregaAlvo.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

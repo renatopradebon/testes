@@ -1,0 +1,39 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myEstagioExecucaoEntregaLabel" jhiTranslate="platform.estagioExecucaoEntrega.home.createOrEditLabel">Create or edit a Estagio Execucao Entrega</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!estagioExecucaoEntrega.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="estagioExecucaoEntrega.id" readonly />
+        </div>
+
+        <div class="form-group">
+            <label jhiTranslate="platform.estagioExecucaoEntrega.planoClassificador" for="field_planoClassificador">Plano Classificador</label>
+            <select class="form-control" id="field_planoClassificador" name="planoClassificador" [(ngModel)]="estagioExecucaoEntrega.planoClassificador">
+                <option [ngValue]="null"></option>
+                <option [ngValue]="planoClassificadorOption.id === estagioExecucaoEntrega.planoClassificador?.id ? estagioExecucaoEntrega.planoClassificador : planoClassificadorOption" *ngFor="let planoClassificadorOption of planoclassificadors; trackBy: trackPlanoClassificadorById">{{planoClassificadorOption.id}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label jhiTranslate="platform.estagioExecucaoEntrega.entrega" for="field_entrega">Entrega</label>
+            <select class="form-control" id="field_entrega" name="entrega" [(ngModel)]="estagioExecucaoEntrega.entrega" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="entregaOption.id === estagioExecucaoEntrega.entrega?.id ? estagioExecucaoEntrega.entrega : entregaOption" *ngFor="let entregaOption of entregas; trackBy: trackEntregaById">{{entregaOption.id}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

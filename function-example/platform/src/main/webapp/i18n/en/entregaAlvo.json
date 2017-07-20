@@ -1,0 +1,27 @@
+{
+    "platform": {
+        "entregaAlvo" : {
+            "home": {
+                "title": "Entrega Alvoes",
+                "createLabel": "Create a new Entrega Alvo",
+                "createOrEditLabel": "Create or edit a Entrega Alvo"
+            },
+            "created": "A new Entrega Alvo is created with identifier {{ param }}",
+            "updated": "A Entrega Alvo is updated with identifier {{ param }}",
+            "deleted": "A Entrega Alvo is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Entrega Alvo {{ id }}?"
+            },
+            "detail": {
+                "title": "Entrega Alvo"
+            },
+            "requerAutorizacao": "Requer Autorizacao",
+            "autorizado": "Autorizado",
+            "autorizadoPor": "Autorizado Por",
+            "dataAgendamento": "Data Agendamento",
+            "empresa": "Empresa",
+            "deliveryOrder": "Delivery Order",
+            "estagio": "Estagio"
+        }
+    }
+}

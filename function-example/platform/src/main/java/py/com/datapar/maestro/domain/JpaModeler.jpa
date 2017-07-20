@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" pkg="py.com.datapar.maestro.domain" v="4.2.4" rws="_1499958379376237" cws="_1499958379376237" sm="false" xs="false" id="_149995837675390" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd">
+    <jpa:mapped-superclass compositePrimaryKeyClass="EntityWithIdentityPK" abs="true" class="EntityWithIdentity" v="true" xre="false" m="false" rootElement="_149995837675390" id="_149995837699895">
+        <jpa:annotation e="true" n="@com.fasterxml.jackson.annotation.JsonIdentityInfo(generator=com.fasterxml.jackson.annotation.ObjectIdGenerators.IntSequenceGenerator.class)"/>
+        <jpa:inf e="true" n="py.com.datapar.maestro.domain.commons.model.Identity"/>
+        <jpa:inf e="true" n="java.lang.Comparable&lt;py.com.datapar.maestro.domain.commons.model.EntityWithIdentity&gt;"/>
+        <jpa:attributes>
+            <jpa:basic optional="false" attribute-type="py.com.datapar.maestro.domain.commons.model.vo.Situation" v="true" name="situation" ft="false" id="_149995837700597">
+                <jpa:enumerated>ORDINAL</jpa:enumerated>
+            </jpa:basic>
+            <jpa:id attribute-type="String" v="true" name="id" ft="false" id="_149995837700596">
+                <jpa:bv>
+                    <jpa:si mi="16" ma="36"/>
+                </jpa:bv>
+                <jpa:column unique="true" nullable="false" insertable="true" updatable="false" length="36" precision="0" scale="0"/>
+            </jpa:id>
+            <jpa:version attribute-type="Long" v="true" name="version" ft="false" id="_149995837700598">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:version>
+        </jpa:attributes>
+    </jpa:mapped-superclass>
+    <jpa:entity compositePrimaryKeyClass="ConfigSchemaAppRevisionPK" abs="false" class="ConfigSchemaAppRevision" superclassId="_149995837699895" v="true" xre="false" m="false" rootElement="_149995837675390" id="_149995837697291">
+        <jpa:attributes>
+            <jpa:basic optional="false" attribute-type="java.sql.Timestamp" v="true" name="dataUpdated" ft="false" id="_149995837697392">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:many-to-one optional="false" primaryKey="false" connected-entity-id="_1499958379301226" connected-attribute-id="_1499958379302235" v="true" name="configSchema" ft="false" id="_149995837697394"/>
+            <jpa:one-to-one own="true" orp="false" optional="false" primaryKey="false" connected-entity-id="_1499958378584188" v="true" name="produtoAppVersao" ft="false" id="_149995837697393"/>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="DeliveryOrderAlvoServicoPK" abs="false" class="DeliveryOrderAlvoServico" superclassId="_149995837699895" v="true" xre="false" m="false" rootElement="_149995837675390" id="_149995837713799">
+        <jpa:attributes>
+            <jpa:basic attribute-type="py.com.datapar.maestro.domain.commons.model.vo.DeliveryOrderAlvoEstado" v="true" name="estado" ft="false" id="_1499958377138100">
+                <jpa:enumerated>ORDINAL</jpa:enumerated>
+            </jpa:basic>
+            <jpa:basic attribute-type="py.com.datapar.maestro.domain.commons.model.vo.TipoServidor" v="true" name="encarregadoEntrega" ft="false" id="_1499958377138101">
+                <jpa:enumerated>ORDINAL</jpa:enumerated>
+            </jpa:basic>
+            <jpa:many-to-one primaryKey="false" connected-entity-id="_1499958379229221" connected-attribute-id="_1499958379229225" v="true" name="deliveryOrder" ft="false" id="_1499958377138103">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+            </jpa:many-to-one>
+            <jpa:one-to-one own="true" primaryKey="false" connected-entity-id="_1499958379301226" v="true" name="configSchema" ft="false" id="_1499958377138102">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+            </jpa:one-to-one>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="ArtefatoPK" abs="false" class="Artefato" superclassId="_149995837699895" v="true" xre="false" m="false" rootElement="_149995837675390" id="_1499958377340104">
+        <jpa:attributes>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="nome" ft="false" id="_1499958377340105">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="extensao" ft="false" id="_1499958377340106">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="fileUri" ft="false" id="_1499958377340107">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="versao" ft="false" id="_1499958377340108">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="sha1" ft="false" id="_1499958377353110">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:many-to-many own="false" collection-type="java.util.List" connected-entity-id="_1499958378584188" connected-attribute-id="_1499958378584191" fetch="LAZY" v="true" name="versoes" ft="false" id="_1499958377340109">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+            </jpa:many-to-many>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="EstagioExecucaoEntregaPK" abs="false" class="EstagioExecucaoEntrega" superclassId="_149995837699895" v="true" xre="false" m="false" rootElement="_149995837675390" id="_1499958377471111">
+        <jpa:attributes>
+            <jpa:basic attribute-type="py.com.datapar.maestro.domain.commons.model.vo.EstagioExecucaoEstado" v="true" name="estado" ft="false" id="_1499958377471112">
+                <jpa:enumerated>ORDINAL</jpa:enumerated>
+            </jpa:basic>
+            <jpa:many-to-one primaryKey="false" connected-entity-id="_1499958378181161" connected-attribute-id="_1499958378181165" v="true" name="entrega" ft="false" id="_1499958377471114">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonBackReference"/>
+            </jpa:many-to-one>
+            <jpa:one-to-many own="false" collection-type="java.util.List" connected-entity-id="_1499958378769201" connected-attribute-id="_1499958378769205" fetch="LAZY" v="true" name="alvos" ft="false" id="_1499958377472115">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonManagedReference"/>
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-many>
+            <jpa:one-to-one own="true" primaryKey="false" connected-entity-id="_1499958377568116" v="true" name="planoClassificador" ft="false" id="_1499958377471113"/>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="PlanoClassificadorPK" abs="false" class="PlanoClassificador" superclassId="_149995837699895" v="true" xre="false" m="false" rootElement="_149995837675390" id="_1499958377568116">
+        <jpa:attributes>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="queryEmpresas" ft="false" id="_1499958377568117">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="int" v="true" name="ordemExecucao" ft="false" id="_1499958377568118">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="nomeClassificador" ft="false" id="_1499958377568119">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic optional="true" attribute-type="py.com.datapar.maestro.domain.commons.model.vo.TipoClassificador" v="true" name="tipoClassificador" ft="false" id="_1499958377568120">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+                <jpa:enumerated>ORDINAL</jpa:enumerated>
+            </jpa:basic>
+            <jpa:many-to-one optional="true" primaryKey="false" connected-entity-id="_1499958378902212" connected-attribute-id="_1499958378902214" v="true" name="plano" ft="false" id="_1499958377568121">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonBackReference"/>
+            </jpa:many-to-one>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="ClientePK" abs="false" class="Cliente" superclassId="_149995837699895" v="true" xre="false" m="false" rootElement="_149995837675390" id="_1499958377654122">
+        <jpa:attributes>
+            <jpa:basic optional="true" attribute-type="long" v="true" name="codigo" ft="false" id="_1499958377654123">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic optional="true" attribute-type="String" v="true" name="nome" ft="false" id="_1499958377654124">
+                <jpa:bv>
+                    <jpa:nn m="El nombre es obligatorio!"/>
+                    <jpa:si ma="255"/>
+                </jpa:bv>
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:one-to-many orp="true" own="false" collection-type="java.util.List" connected-entity-id="_1499958378035144" connected-attribute-id="_1499958378046148" fetch="LAZY" v="true" name="empresas" ft="false" id="_1499958377654125">
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-many>
+            <jpa:one-to-many orp="true" own="false" collection-type="java.util.List" connected-entity-id="_1499958378323175" connected-attribute-id="_1499958378323179" fetch="LAZY" v="true" name="servidores" ft="false" id="_1499958377660126">
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-many>
+            <jpa:many-to-many own="false" collection-type="java.util.List" connected-entity-id="_1499958378118151" connected-attribute-id="_1499958378123159" fetch="LAZY" v="true" name="produtos" ft="false" id="_1499958377660127">
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:many-to-many>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="ConfigSchemaDbRevisionPK" abs="false" class="ConfigSchemaDbRevision" superclassId="_149995837699895" v="true" xre="false" m="false" rootElement="_149995837675390" id="_1499958377807128">
+        <jpa:attributes>
+            <jpa:basic optional="false" attribute-type="java.sql.Timestamp" v="true" name="dataUpdated" ft="false" id="_1499958377807129">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:many-to-one optional="false" primaryKey="false" connected-entity-id="_1499958379301226" connected-attribute-id="_1499958379307236" v="true" name="configSchema" ft="false" id="_1499958377807131"/>
+            <jpa:one-to-one own="true" orp="false" optional="false" primaryKey="false" connected-entity-id="_1499958378449183" v="true" name="produtoDbRevision" ft="false" id="_1499958377807130"/>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="ConteudoPK" abs="true" class="Conteudo" superclassId="_149995837699895" v="true" xre="false" m="false" rootElement="_149995837675390" id="_1499958377913132">
+        <jpa:annotation e="true" n="@com.fasterxml.jackson.annotation.JsonTypeInfo(use=com.fasterxml.jackson.annotation.JsonTypeInfo.Id.NAME, include=com.fasterxml.jackson.annotation.JsonTypeInfo.As.WRAPPER_OBJECT, property=&quot;type&quot;)"/>
+        <jpa:annotation e="true" n="@com.fasterxml.jackson.annotation.JsonSubTypes({@com.fasterxml.jackson.annotation.JsonSubTypes.Type(value=py.com.datapar.maestro.domain.entrega.model.ConteudoApp.class, name=&quot;conteudo_app&quot;), @com.fasterxml.jackson.annotation.JsonSubTypes.Type(value=py.com.datapar.maestro.domain.entrega.model.ConteudoDb.class, name=&quot;conteudo_db&quot;), @com.fasterxml.jackson.annotation.JsonSubTypes.Type(value=py.com.datapar.maestro.domain.entrega.model.ConteudoCommand.class, name=&quot;conteudo_command&quot;)})"/>
+        <jpa:attributes/>
+        <jpa:inheritance strategy="JOINED"/>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="ServicoPK" abs="true" class="Servico" superclassId="_149995837699895" v="true" xre="false" m="false" rootElement="_149995837675390" id="_1499958377973139">
+        <jpa:annotation e="true" n="@com.fasterxml.jackson.annotation.JsonTypeInfo(use=com.fasterxml.jackson.annotation.JsonTypeInfo.Id.NAME, include=com.fasterxml.jackson.annotation.JsonTypeInfo.As.WRAPPER_OBJECT, property=&quot;type&quot;)"/>
+        <jpa:annotation e="true" n="@com.fasterxml.jackson.annotation.JsonSubTypes({@com.fasterxml.jackson.annotation.JsonSubTypes.Type(value=py.com.datapar.maestro.domain.cliente.model.ServicoApp.class, name=&quot;servico_app&quot;), @com.fasterxml.jackson.annotation.JsonSubTypes.Type(value=py.com.datapar.maestro.domain.cliente.model.ServicoDb.class, name=&quot;servico_db&quot;)})"/>
+        <jpa:attributes>
+            <jpa:basic optional="true" attribute-type="String" v="true" name="maestroAcessKey" ft="false" id="_1499958377973140"/>
+            <jpa:many-to-one optional="true" primaryKey="false" connected-entity-id="_1499958378323175" connected-attribute-id="_1499958378323180" v="true" name="servidor" ft="false" id="_1499958377973141"/>
+            <jpa:many-to-one optional="true" primaryKey="false" connected-entity-id="_1499958377973139" connected-attribute-id="_1499958377973143" v="true" name="parent" ft="false" id="_1499958377973142"/>
+            <jpa:one-to-many orp="false" own="false" collection-type="java.util.List" connected-entity-id="_1499958377973139" connected-attribute-id="_1499958377973142" fetch="LAZY" v="true" name="childList" ft="false" id="_1499958377973143"/>
+        </jpa:attributes>
+        <jpa:inheritance strategy="JOINED"/>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="ServicoDbPK" abs="false" class="ServicoDb" superclassId="_1499958377973139" v="true" xre="false" m="false" rootElement="_149995837675390" id="_1499958377967133">
+        <jpa:annotation e="true" n="@com.fasterxml.jackson.annotation.JsonTypeName(&quot;servico_db&quot;)"/>
+        <jpa:attributes>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="userdbaLogin" ft="false" id="_1499958377967134">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="userdbaPassword" ft="false" id="_1499958377967135">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="connectionURL" ft="false" id="_1499958377967136">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="py.com.datapar.maestro.domain.commons.model.vo.BancoUtilizado" v="true" name="bancoUtilizado" ft="false" id="_1499958377967137">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+                <jpa:enumerated>ORDINAL</jpa:enumerated>
+            </jpa:basic>
+            <jpa:one-to-many orp="false" own="false" collection-type="java.util.List" connected-entity-id="_1499958379301226" connected-attribute-id="_1499958379302234" fetch="LAZY" v="true" name="configSchemas" ft="false" id="_1499958377967138">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonManagedReference"/>
+            </jpa:one-to-many>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="EmpresaPK" abs="false" class="Empresa" superclassId="_149995837699895" v="true" xre="false" m="false" rootElement="_149995837675390" id="_1499958378035144">
+        <jpa:attributes>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="nome" ft="false" id="_1499958378035145">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="long" v="true" name="codigo" ft="false" id="_1499958378035146">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:many-to-one optional="false" primaryKey="false" connected-entity-id="_1499958377654122" connected-attribute-id="_1499958377654125" v="true" name="cliente" ft="false" id="_1499958378046148">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+            </jpa:many-to-one>
+            <jpa:one-to-many orp="false" own="false" collection-type="java.util.List" connected-entity-id="_1499958378254170" connected-attribute-id="_1499958378254173" fetch="EAGER" v="true" name="filiais" ft="false" id="_1499958378046149">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-many>
+            <jpa:one-to-many orp="false" own="false" collection-type="java.util.List" connected-entity-id="_1499958379229221" connected-attribute-id="_1499958379229224" fetch="LAZY" v="true" name="deliveryOrders" ft="false" id="_1499958378047150">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-many>
+            <jpa:element-collection target-class="java.lang.String" collection-type="java.util.List" v="true" name="tags" ft="false" id="_1499958378036147">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+            </jpa:element-collection>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="ProdutoPK" abs="false" class="Produto" superclassId="_149995837699895" v="true" xre="false" m="false" rootElement="_149995837675390" id="_1499958378118151">
+        <jpa:attributes>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="nome" ft="false" id="_1499958378118152">
+                <jpa:bv>
+                    <jpa:nn m="El nombre es obligatorio!"/>
+                    <jpa:si ma="255"/>
+                </jpa:bv>
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="py.com.datapar.maestro.domain.commons.model.vo.BancoUtilizado" v="true" name="bancoUtilizado" ft="false" id="_1499958378119153">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+                <jpa:enumerated>ORDINAL</jpa:enumerated>
+            </jpa:basic>
+            <jpa:basic optional="true" attribute-type="py.com.datapar.maestro.domain.commons.model.vo.ProtudoTipo" v="true" name="tipoProduto" ft="false" id="_1499958378119154">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+                <jpa:enumerated>ORDINAL</jpa:enumerated>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" name="pathImagem" ft="false" id="_1499958378123160">
+                <jpa:bv>
+                    <jpa:si ma="500"/>
+                </jpa:bv>
+                <jpa:column unique="false" nullable="true" insertable="true" updatable="true" length="500" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:one-to-many orp="false" own="false" collection-type="java.util.List" connected-entity-id="_1499958378584188" connected-attribute-id="_1499958378589192" fetch="LAZY" v="true" name="versoesApp" ft="false" id="_1499958378119155">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-many>
+            <jpa:one-to-many orp="false" own="false" collection-type="java.util.List" connected-entity-id="_1499958378449183" connected-attribute-id="_1499958378459186" fetch="LAZY" v="true" name="revisoesDB" ft="false" id="_1499958378123156">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-many>
+            <jpa:one-to-many orp="false" own="false" collection-type="java.util.List" connected-entity-id="_1499958379301226" connected-attribute-id="_1499958379302232" fetch="LAZY" v="true" name="configSchemas" ft="false" id="_1499958378123157">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-many>
+            <jpa:one-to-many orp="false" own="false" collection-type="java.util.List" connected-entity-id="_1499958378902212" connected-attribute-id="_1499958378902213" fetch="LAZY" v="true" name="planos" ft="false" id="_1499958378123158">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-many>
+            <jpa:many-to-many own="true" collection-type="java.util.List" connected-entity-id="_1499958377654122" connected-attribute-id="_1499958377660127" fetch="LAZY" v="true" name="clientes" ft="false" id="_1499958378123159">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+            </jpa:many-to-many>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="EntregaPK" abs="false" class="Entrega" superclassId="_149995837699895" v="true" xre="false" m="false" rootElement="_149995837675390" id="_1499958378181161">
+        <jpa:attributes>
+            <jpa:basic optional="false" attribute-type="py.com.datapar.maestro.domain.commons.model.vo.EntregaEstado" v="true" name="estado" ft="false" id="_1499958378181162">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+                <jpa:enumerated>ORDINAL</jpa:enumerated>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="codinomeEntrega" ft="false" id="_1499958378181163">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="java.util.Calendar" v="true" name="dataCriacao" ft="false" id="_1499958378186167">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="false"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.util.Calendar" v="true" name="dataFinalizacao" ft="false" id="_1499958378186168"/>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="usuarioCriacao" ft="false" id="_1499958378186169">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:many-to-one optional="true" primaryKey="false" connected-entity-id="_1499958378902212" v="true" name="plano" ft="false" id="_1499958378181164"/>
+            <jpa:one-to-many orp="false" own="false" collection-type="java.util.List" connected-entity-id="_1499958377471111" connected-attribute-id="_1499958377471114" v="true" name="estagios" ft="false" id="_1499958378181165"/>
+            <jpa:one-to-many orp="false" own="true" collection-type="java.util.List" connected-entity-id="_1499958377913132" fetch="LAZY" v="true" name="conteudos" ft="false" id="_1499958378186166">
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-many>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="FilialPK" abs="false" class="Filial" superclassId="_149995837699895" v="true" xre="false" m="false" rootElement="_149995837675390" id="_1499958378254170">
+        <jpa:attributes>
+            <jpa:basic optional="false" attribute-type="long" v="true" name="codigo" ft="false" id="_1499958378254171"/>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="nome" ft="false" id="_1499958378254172"/>
+            <jpa:many-to-one optional="false" primaryKey="false" connected-entity-id="_1499958378035144" connected-attribute-id="_1499958378046149" v="true" name="empresa" ft="false" id="_1499958378254173">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+            </jpa:many-to-one>
+            <jpa:one-to-many orp="false" own="false" collection-type="java.util.List" connected-entity-id="_1499958379301226" connected-attribute-id="_1499958379302233" fetch="EAGER" v="true" name="configSchemas" ft="false" id="_1499958378254174">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-many>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="ServidorPK" abs="false" class="Servidor" superclassId="_149995837699895" v="true" xre="false" m="false" rootElement="_149995837675390" id="_1499958378323175">
+        <jpa:attributes>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="hostIP" ft="false" id="_1499958378323176">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="contato" ft="false" id="_1499958378323177"/>
+            <jpa:basic optional="true" attribute-type="String" v="true" name="observacao" ft="false" id="_1499958378323178"/>
+            <jpa:many-to-one optional="false" primaryKey="false" connected-entity-id="_1499958377654122" connected-attribute-id="_1499958377660126" v="true" name="cliente" ft="false" id="_1499958378323179">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+            </jpa:many-to-one>
+            <jpa:one-to-many orp="false" own="false" collection-type="java.util.List" connected-entity-id="_1499958377973139" connected-attribute-id="_1499958377973141" fetch="EAGER" v="true" name="servicos" ft="false" id="_1499958378323180">
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-many>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="ConteudoDbPK" abs="false" class="ConteudoDb" superclassId="_1499958377913132" v="true" xre="false" m="false" rootElement="_149995837675390" id="_1499958378400181">
+        <jpa:annotation e="true" n="@com.fasterxml.jackson.annotation.JsonTypeName(&quot;conteudo_db&quot;)"/>
+        <jpa:attributes>
+            <jpa:one-to-one own="true" orp="false" optional="true" primaryKey="false" connected-entity-id="_1499958378449183" v="true" name="revisao" ft="false" id="_1499958378400182"/>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="ProdutoDbRevisionPK" abs="false" class="ProdutoDbRevision" superclassId="_149995837699895" v="true" xre="false" m="false" rootElement="_149995837675390" id="_1499958378449183">
+        <jpa:attributes>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="revisaoBanco" ft="false" id="_1499958378449184">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="long" v="true" name="ordemExecucao" ft="false" id="_1499958378459187">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="false" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:many-to-one optional="false" primaryKey="false" connected-entity-id="_1499958378118151" connected-attribute-id="_1499958378123156" v="true" name="produto" ft="false" id="_1499958378459186">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+            </jpa:many-to-one>
+            <jpa:element-collection target-class="java.lang.String" collection-type="java.util.List" v="true" name="scripts" ft="false" id="_1499958378450185">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:element-collection>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="ProdutoAppVersaoPK" abs="false" class="ProdutoAppVersao" superclassId="_149995837699895" v="true" xre="false" m="false" rootElement="_149995837675390" id="_1499958378584188">
+        <jpa:attributes>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="versaoProduto" ft="false" id="_1499958378584189">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="revisaoMinimaDB" ft="false" id="_1499958378584190">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="long" v="true" name="ordemExecucao" ft="false" id="_1499958378589193">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="false" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:many-to-one optional="false" primaryKey="false" connected-entity-id="_1499958378118151" connected-attribute-id="_1499958378119155" v="true" name="produto" ft="false" id="_1499958378589192"/>
+            <jpa:many-to-many own="true" collection-type="java.util.List" connected-entity-id="_1499958377340104" connected-attribute-id="_1499958377340109" fetch="LAZY" v="true" name="artefatos" ft="false" id="_1499958378584191">
+                <jpa:join-table name="ARTEFATO_VERSAO">
+                    <jpa:join-column name="ARTEFATO_ID" rc="ID" unique="false" nullable="true" insertable="true" updatable="true"/>
+                    <jpa:inverse-join-column name="VERSAO_ID" rc="ID" unique="false" nullable="true" insertable="true" updatable="true"/>
+                </jpa:join-table>
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:many-to-many>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="ServicoAppPK" abs="false" class="ServicoApp" superclassId="_1499958377973139" v="true" xre="false" m="false" rootElement="_149995837675390" id="_1499958378659194">
+        <jpa:annotation e="true" n="@com.fasterxml.jackson.annotation.JsonTypeName(&quot;servico_app&quot;)"/>
+        <jpa:attributes>
+            <jpa:basic optional="true" attribute-type="String" v="true" name="apptoken" ft="false" id="_1499958378659195">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="int" v="true" name="hostPort" ft="false" id="_1499958378659196">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="int" v="true" name="hostConsolePort" ft="false" id="_1499958378659197">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:one-to-many orp="false" own="false" collection-type="java.util.List" connected-entity-id="_1499958379301226" connected-attribute-id="_1499958379302231" fetch="LAZY" v="true" name="configSchema" ft="false" id="_1499958378659198"/>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="ConteudoAppPK" abs="false" class="ConteudoApp" superclassId="_1499958377913132" v="true" xre="false" m="false" rootElement="_149995837675390" id="_1499958378719199">
+        <jpa:annotation e="true" n="@com.fasterxml.jackson.annotation.JsonTypeName(&quot;conteudo_app&quot;)"/>
+        <jpa:attributes>
+            <jpa:one-to-one own="true" orp="false" optional="true" primaryKey="false" connected-entity-id="_1499958378584188" v="true" name="versao" ft="false" id="_1499958378719200"/>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="EntregaAlvoPK" abs="false" class="EntregaAlvo" superclassId="_149995837699895" v="true" xre="false" m="false" rootElement="_149995837675390" id="_1499958378769201">
+        <jpa:attributes>
+            <jpa:basic attribute-type="py.com.datapar.maestro.domain.commons.model.vo.EntregaAlvoEstado" v="true" name="estado" ft="false" id="_1499958378769202">
+                <jpa:enumerated>ORDINAL</jpa:enumerated>
+            </jpa:basic>
+            <jpa:basic attribute-type="boolean" v="true" name="requerAutorizacao" ft="false" id="_1499958378769206"/>
+            <jpa:basic attribute-type="boolean" v="true" name="autorizado" ft="false" id="_1499958378769207"/>
+            <jpa:basic attribute-type="String" v="true" name="autorizadoPor" ft="false" id="_1499958378769208"/>
+            <jpa:basic attribute-type="java.util.Calendar" v="true" name="dataAgendamento" ft="false" id="_1499958378769209"/>
+            <jpa:many-to-one primaryKey="false" connected-entity-id="_1499958377471111" connected-attribute-id="_1499958377472115" v="true" name="estagio" ft="false" id="_1499958378769205">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonBackReference"/>
+            </jpa:many-to-one>
+            <jpa:one-to-one own="true" primaryKey="false" connected-entity-id="_1499958378035144" v="true" name="empresa" ft="false" id="_1499958378769203"/>
+            <jpa:one-to-one own="true" primaryKey="false" connected-entity-id="_1499958379229221" v="true" name="deliveryOrder" ft="false" id="_1499958378769204"/>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="ConteudoCommandPK" abs="false" class="ConteudoCommand" superclassId="_1499958377913132" v="true" xre="false" m="false" rootElement="_149995837675390" id="_1499958378837210">
+        <jpa:annotation e="true" n="@com.fasterxml.jackson.annotation.JsonTypeName(&quot;conteudo_command&quot;)"/>
+        <jpa:attributes>
+            <jpa:element-collection target-class="java.lang.String" collection-type="java.util.List" v="true" name="comandos" ft="false" id="_1499958378838211"/>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="PlanoPK" abs="false" class="Plano" superclassId="_149995837699895" v="true" xre="false" m="false" rootElement="_149995837675390" id="_1499958378902212">
+        <jpa:attributes>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="nome" ft="false" id="_1499958378906215">
+                <jpa:bv>
+                    <jpa:nn m="El nombre es obligatorio!"/>
+                    <jpa:si ma="255"/>
+                </jpa:bv>
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:many-to-one optional="true" primaryKey="false" connected-entity-id="_1499958378118151" connected-attribute-id="_1499958378123158" v="true" name="produto" ft="false" id="_1499958378902213"/>
+            <jpa:one-to-many orp="false" own="false" collection-type="java.util.List" connected-entity-id="_1499958377568116" connected-attribute-id="_1499958377568121" fetch="LAZY" v="true" name="planoClassificadores" ft="false" id="_1499958378902214">
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+                <jpa:ob>
+                    <jpa:a c="ordemExecucao"/>
+                </jpa:ob>
+            </jpa:one-to-many>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="MaestroAppConfigPK" abs="false" class="MaestroAppConfig" superclassId="_149995837699895" v="true" xre="false" m="false" rootElement="_149995837675390" id="_1499958378965216">
+        <jpa:attributes>
+            <jpa:basic optional="true" attribute-type="String" v="true" name="maestroplatURI" ft="false" id="_1499958378965217"/>
+            <jpa:one-to-one own="true" orp="false" optional="true" primaryKey="false" connected-entity-id="_1499958378659194" v="true" name="servicoMaestroApp" ft="false" id="_1499958378965218"/>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="UsuarioPK" abs="false" class="Usuario" superclassId="_149995837699895" v="true" xre="false" m="false" rootElement="_149995837675390" id="_1499958379133219">
+        <jpa:attributes>
+            <jpa:basic optional="true" attribute-type="String" v="true" name="userId" ft="false" id="_1499958379133220"/>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="DeliveryOrderPK" abs="false" class="DeliveryOrder" superclassId="_149995837699895" v="true" xre="false" m="false" rootElement="_149995837675390" id="_1499958379229221">
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" name="packageKind" ft="false" id="_1499958379229222"/>
+            <jpa:basic attribute-type="String" v="true" name="packageData" ft="false" id="_1499958379229223"/>
+            <jpa:many-to-one primaryKey="false" connected-entity-id="_1499958378035144" connected-attribute-id="_1499958378047150" v="true" name="empresa" ft="false" id="_1499958379229224">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+            </jpa:many-to-one>
+            <jpa:one-to-many own="false" collection-type="java.util.List" connected-entity-id="_149995837713799" connected-attribute-id="_1499958377138103" fetch="LAZY" v="true" name="alvos" ft="false" id="_1499958379229225">
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-many>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="ConfigSchemaPK" abs="false" class="ConfigSchema" superclassId="_149995837699895" v="true" xre="false" m="false" rootElement="_149995837675390" id="_1499958379301226">
+        <jpa:attributes>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="schemaName" ft="false" id="_1499958379302227">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="boolean" v="true" name="schemaTestEnabled" ft="false" id="_1499958379302228">
+                <jpa:column unique="false" nullable="false" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:many-to-one optional="false" primaryKey="false" connected-entity-id="_1499958378659194" connected-attribute-id="_1499958378659198" v="true" name="servicoAPP" ft="false" id="_1499958379302231">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+            </jpa:many-to-one>
+            <jpa:many-to-one optional="false" primaryKey="false" connected-entity-id="_1499958378118151" connected-attribute-id="_1499958378123157" v="true" name="produto" ft="false" id="_1499958379302232">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+            </jpa:many-to-one>
+            <jpa:many-to-one optional="false" primaryKey="false" connected-entity-id="_1499958378254170" connected-attribute-id="_1499958378254174" v="true" name="filial" ft="false" id="_1499958379302233">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+            </jpa:many-to-one>
+            <jpa:many-to-one optional="true" primaryKey="false" connected-entity-id="_1499958377967133" connected-attribute-id="_1499958377967138" v="true" name="servicoDB" ft="false" id="_1499958379302234">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+            </jpa:many-to-one>
+            <jpa:one-to-many orp="false" own="false" collection-type="java.util.List" connected-entity-id="_149995837697291" connected-attribute-id="_149995837697394" fetch="LAZY" v="true" name="appRevisions" ft="false" id="_1499958379302235">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-many>
+            <jpa:one-to-many orp="false" own="false" collection-type="java.util.List" connected-entity-id="_1499958377807128" connected-attribute-id="_1499958377807131" fetch="LAZY" v="true" name="dbRevisions" ft="false" id="_1499958379307236">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-many>
+            <jpa:one-to-one own="true" orp="false" optional="true" primaryKey="false" connected-entity-id="_149995837697291" v="true" name="latestAppRevision" ft="false" id="_1499958379302229">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+            </jpa:one-to-one>
+            <jpa:one-to-one own="true" orp="false" optional="true" primaryKey="false" connected-entity-id="_1499958377807128" v="true" name="latestDbRevision" ft="false" id="_1499958379302230">
+                <jpa:an e="true" n="@com.fasterxml.jackson.annotation.JsonIgnore"/>
+            </jpa:one-to-one>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:snp loc="BEFORE_PACKAGE" e="true">/**
+ * This file was generated by the Jeddict
+ */</jpa:snp>
+    <jpa:wsl>
+        <jpa:ws n="Main" id="_1499958379376237">
+            <i ref="_1499958377471111" x="1668" y="356"/>
+            <i ref="_1499958378035144" x="304" y="1013"/>
+            <i ref="_1499958377340104" x="878" y="1013"/>
+            <i ref="_1499958378118151" x="878" y="32"/>
+            <i ref="_149995837713799" x="572" y="794"/>
+            <i ref="_1499958379229221" x="878" y="1472"/>
+            <i ref="_1499958378769201" x="1401" y="1472"/>
+            <i ref="_1499958379133219" x="1401" y="1013"/>
+            <i ref="_1499958377568116" x="1401" y="575"/>
+            <i ref="_1499958377973139" x="304" y="575"/>
+            <i ref="_1499958378659194" x="32" y="1253"/>
+            <i ref="_149995837697291" x="1668" y="794"/>
+            <i ref="_1499958377913132" x="304" y="32"/>
+            <i ref="_1499958377807128" x="572" y="1253"/>
+            <i ref="_149995837699895" x="1143" y="794"/>
+            <i ref="_1499958378181161" x="1981" y="1472"/>
+            <i ref="_1499958377967133" x="32" y="794"/>
+            <i ref="_1499958378449183" x="1981" y="1013"/>
+            <i ref="_1499958378400181" x="2249" y="1253"/>
+            <i ref="_1499958378837210" x="32" y="356"/>
+            <i ref="_1499958378323175" x="1668" y="1253"/>
+            <i ref="_1499958379301226" x="1401" y="32"/>
+            <i ref="_1499958377654122" x="1143" y="356"/>
+            <i ref="_1499958378254170" x="1143" y="1253"/>
+            <i ref="_1499958378584188" x="304" y="1472"/>
+            <i ref="_1499958378902212" x="572" y="356"/>
+            <i ref="_1499958378719199" x="572" y="1754"/>
+            <i ref="_1499958378965216" x="878" y="575"/>
+        </jpa:ws>
+    </jpa:wsl>
+</jpa:entity-mappings>

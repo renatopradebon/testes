@@ -1,0 +1,23 @@
+{
+    "platform": {
+        "produtoDbRevision" : {
+            "home": {
+                "title": "Produto Db Revisions",
+                "createLabel": "Create a new Produto Db Revision",
+                "createOrEditLabel": "Create or edit a Produto Db Revision"
+            },
+            "created": "A new Produto Db Revision is created with identifier {{ param }}",
+            "updated": "A Produto Db Revision is updated with identifier {{ param }}",
+            "deleted": "A Produto Db Revision is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Produto Db Revision {{ id }}?"
+            },
+            "detail": {
+                "title": "Produto Db Revision"
+            },
+            "revisaoBanco": "Revisao Banco",
+            "ordemExecucao": "Ordem Execucao",
+            "produto": "Produto"
+        }
+    }
+}

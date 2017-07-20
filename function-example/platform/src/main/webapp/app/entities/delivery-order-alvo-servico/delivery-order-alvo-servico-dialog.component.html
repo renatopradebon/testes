@@ -1,0 +1,39 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myDeliveryOrderAlvoServicoLabel" jhiTranslate="platform.deliveryOrderAlvoServico.home.createOrEditLabel">Create or edit a Delivery Order Alvo Servico</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!deliveryOrderAlvoServico.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="deliveryOrderAlvoServico.id" readonly />
+        </div>
+
+        <div class="form-group">
+            <label jhiTranslate="platform.deliveryOrderAlvoServico.configSchema" for="field_configSchema">Config Schema</label>
+            <select class="form-control" id="field_configSchema" name="configSchema" [(ngModel)]="deliveryOrderAlvoServico.configSchema">
+                <option [ngValue]="null"></option>
+                <option [ngValue]="configSchemaOption.id === deliveryOrderAlvoServico.configSchema?.id ? deliveryOrderAlvoServico.configSchema : configSchemaOption" *ngFor="let configSchemaOption of configschemas; trackBy: trackConfigSchemaById">{{configSchemaOption.id}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label jhiTranslate="platform.deliveryOrderAlvoServico.deliveryOrder" for="field_deliveryOrder">Delivery Order</label>
+            <select class="form-control" id="field_deliveryOrder" name="deliveryOrder" [(ngModel)]="deliveryOrderAlvoServico.deliveryOrder" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="deliveryOrderOption.id === deliveryOrderAlvoServico.deliveryOrder?.id ? deliveryOrderAlvoServico.deliveryOrder : deliveryOrderOption" *ngFor="let deliveryOrderOption of deliveryorders; trackBy: trackDeliveryOrderById">{{deliveryOrderOption.id}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

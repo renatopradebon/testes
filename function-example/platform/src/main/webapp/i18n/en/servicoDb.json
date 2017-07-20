@@ -1,0 +1,24 @@
+{
+    "platform": {
+        "servicoDb" : {
+            "home": {
+                "title": "Servico Dbs",
+                "createLabel": "Create a new Servico Db",
+                "createOrEditLabel": "Create or edit a Servico Db"
+            },
+            "created": "A new Servico Db is created with identifier {{ param }}",
+            "updated": "A Servico Db is updated with identifier {{ param }}",
+            "deleted": "A Servico Db is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Servico Db {{ id }}?"
+            },
+            "detail": {
+                "title": "Servico Db"
+            },
+            "userdbaLogin": "Userdba Login",
+            "userdbaPassword": "Userdba Password",
+            "connectionURL": "Connection URL",
+            "configSchemas": "Config Schemas"
+        }
+    }
+}

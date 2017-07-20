@@ -1,0 +1,30 @@
+{
+    "platform": {
+        "configSchema" : {
+            "home": {
+                "title": "Config Schemas",
+                "createLabel": "Create a new Config Schema",
+                "createOrEditLabel": "Create or edit a Config Schema"
+            },
+            "created": "A new Config Schema is created with identifier {{ param }}",
+            "updated": "A Config Schema is updated with identifier {{ param }}",
+            "deleted": "A Config Schema is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Config Schema {{ id }}?"
+            },
+            "detail": {
+                "title": "Config Schema"
+            },
+            "schemaName": "Schema Name",
+            "schemaTestEnabled": "Schema Test Enabled",
+            "latestAppRevision": "Latest App Revision",
+            "latestDbRevision": "Latest Db Revision",
+            "servicoAPP": "Servico APP",
+            "produto": "Produto",
+            "filial": "Filial",
+            "servicoDB": "Servico DB",
+            "appRevisions": "App Revisions",
+            "dbRevisions": "Db Revisions"
+        }
+    }
+}

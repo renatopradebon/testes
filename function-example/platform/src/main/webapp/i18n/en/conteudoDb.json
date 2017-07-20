@@ -1,0 +1,21 @@
+{
+    "platform": {
+        "conteudoDb" : {
+            "home": {
+                "title": "Conteudo Dbs",
+                "createLabel": "Create a new Conteudo Db",
+                "createOrEditLabel": "Create or edit a Conteudo Db"
+            },
+            "created": "A new Conteudo Db is created with identifier {{ param }}",
+            "updated": "A Conteudo Db is updated with identifier {{ param }}",
+            "deleted": "A Conteudo Db is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Conteudo Db {{ id }}?"
+            },
+            "detail": {
+                "title": "Conteudo Db"
+            },
+            "revisao": "Revisao"
+        }
+    }
+}

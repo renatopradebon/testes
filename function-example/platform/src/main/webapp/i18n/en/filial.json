@@ -1,0 +1,24 @@
+{
+    "platform": {
+        "filial" : {
+            "home": {
+                "title": "Filials",
+                "createLabel": "Create a new Filial",
+                "createOrEditLabel": "Create or edit a Filial"
+            },
+            "created": "A new Filial is created with identifier {{ param }}",
+            "updated": "A Filial is updated with identifier {{ param }}",
+            "deleted": "A Filial is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Filial {{ id }}?"
+            },
+            "detail": {
+                "title": "Filial"
+            },
+            "codigo": "Codigo",
+            "nome": "Nome",
+            "empresa": "Empresa",
+            "configSchemas": "Config Schemas"
+        }
+    }
+}

@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="2995.38493265993" y="794.0">py.com.datapar.maestro.domain.produto.model.ClassificadorEntrega</node>
+    <node x="482.00000000000045" y="143.0">py.com.datapar.maestro.domain.commons.model.vo.EntregaEstado</node>
+    <node x="3758.3249544051628" y="772.0">py.com.datapar.maestro.domain.entrega.model.DeliveryOrderAlvoServico</node>
+    <node x="315.1291210718289" y="2259.5">py.com.datapar.maestro.domain.entrega.model.EstagioExecucaoEntrega</node>
+    <node x="1639.5405618686864" y="1384.0">py.com.datapar.maestro.domain.entrega.model.Conteudo</node>
+    <node x="2341.941621071829" y="176.0">py.com.datapar.maestro.domain.commons.model.vo.Situation</node>
+    <node x="899.1291210718289" y="2215.0">py.com.datapar.maestro.domain.entrega.dto.EntregaDTO</node>
+    <node x="2902.316621071829" y="1633.0">py.com.datapar.maestro.domain.produto.model.Produto</node>
+    <node x="2545.941621071829" y="232.0">py.com.datapar.maestro.domain.commons.model.Identity</node>
+    <node x="661.1502490179596" y="1721.0">py.com.datapar.maestro.domain.entrega.model.Entrega</node>
+    <node x="231.00000000000045" y="143.0">py.com.datapar.maestro.domain.commons.model.vo.EstagioExecucaoEstado</node>
+    <node x="2143.191621071829" y="1842.0">py.com.datapar.maestro.domain.entrega.model.ConteudoDb</node>
+    <node x="2748.191621071829" y="1317.5">py.com.datapar.maestro.domain.produto.model.ProdutoDbRevision</node>
+    <node x="2927.804121071829" y="0.0">py.com.datapar.maestro.domain.commons.model.vo.BaseEnum</node>
+    <node x="2300.191621071829" y="1295.5">py.com.datapar.maestro.domain.produto.model.ProdutoAppVersao</node>
+    <node x="3432.179166666667" y="143.0">py.com.datapar.maestro.domain.commons.model.vo.ProtudoTipo</node>
+    <node x="3877.991621071829" y="165.0">py.com.datapar.maestro.domain.commons.model.vo.TipoServidor</node>
+    <node x="4116.991621071829" y="154.0">py.com.datapar.maestro.domain.commons.model.vo.DeliveryOrderAlvoEstado</node>
+    <node x="1732.1291210718289" y="1842.0">py.com.datapar.maestro.domain.entrega.model.ConteudoApp</node>
+    <node x="908.3916666666669" y="2646.0">py.com.datapar.maestro.domain.entrega.model.EntregaAlvo</node>
+    <node x="1381.1291210718289" y="1842.0">py.com.datapar.maestro.domain.entrega.model.ConteudoCommand</node>
+    <node x="3252.016666666667" y="2690.0">py.com.datapar.maestro.domain.commons.model.MaestroAppConfig</node>
+    <node x="2348.691621071829" y="422.0">py.com.datapar.maestro.domain.commons.model.EntityWithIdentity</node>
+    <node x="1760.5405618686864" y="1317.5">py.com.datapar.maestro.domain.produto.model.PlanoEntrega</node>
+    <node x="3317.329166666667" y="2381.0">py.com.datapar.maestro.domain.cliente.model</node>
+    <node x="2177.5166666666673" y="838.0">py.com.datapar.maestro.domain.commons.model.Usuario</node>
+    <node x="3713.857228535353" y="1028.0">py.com.datapar.maestro.domain.entrega.model.DeliveryOrder</node>
+    <node x="0.0" y="154.0">py.com.datapar.maestro.domain.commons.model.vo.EntregaAlvoEstado</node>
+    <node x="3558.179166666667" y="1284.0">py.com.datapar.maestro.domain.commons.model.vo.BancoUtilizado</node>
+    <node x="1804.7541210718289" y="1028.0">py.com.datapar.maestro.domain.produto.model.PlanoEntregaClassificador</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="py.com.datapar.maestro.domain.cliente.model" target="py.com.datapar.maestro.domain.entrega.model.DeliveryOrder">
+      <point x="39.55000000000007" y="-14.5" />
+      <point x="3413.379166666667" y="2185.0" />
+      <point x="3887.991621071829" y="2185.0" />
+      <point x="3887.991621071829" y="1254.0" />
+      <point x="3909.357228535353" y="1254.0" />
+      <point x="0.0" y="103.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.Entrega" target="py.com.datapar.maestro.domain.commons.model.EntityWithIdentity">
+      <point x="-58.75" y="-158.0" />
+      <point x="837.4002490179596" y="702.0" />
+      <point x="2381.791621071829" y="702.0" />
+      <point x="-132.4000000000001" y="125.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.produto.model.Produto" target="py.com.datapar.maestro.domain.produto.model.PlanoEntrega">
+      <point x="-265.909090909091" y="-246.0" />
+      <point x="2928.907530162738" y="1583.0" />
+      <point x="1928.5405618686864" y="1583.0" />
+      <point x="0.0" y="81.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.cliente.model" target="py.com.datapar.maestro.domain.commons.model.EntityWithIdentity">
+      <point x="5.650000000000091" y="-14.5" />
+      <point x="3379.479166666667" y="2155.0" />
+      <point x="3497.816621071829" y="2155.0" />
+      <point x="3497.816621071829" y="722.0" />
+      <point x="2602.458287738496" y="722.0" />
+      <point x="88.26666666666688" y="125.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.produto.model.ProdutoDbRevision" target="py.com.datapar.maestro.domain.commons.model.EntityWithIdentity">
+      <point x="0.0" y="-81.0" />
+      <point x="2939.691621071829" y="752.0" />
+      <point x="2536.2582877384957" y="752.0" />
+      <point x="22.066666666666606" y="125.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.EntregaAlvo" target="py.com.datapar.maestro.domain.cliente.model">
+      <point x="104.5" y="-103.0" />
+      <point x="1221.8916666666669" y="2606.0" />
+      <point x="3387.954166666667" y="2606.0" />
+      <point x="14.125" y="14.5" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.produto.model.ProdutoDbRevision" target="py.com.datapar.maestro.domain.produto.model.Produto">
+      <point x="143.625" y="81.0" />
+      <point x="3083.316621071829" y="1533.0" />
+      <point x="3194.816621071829" y="1533.0" />
+      <point x="0.0" y="-246.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.commons.model.vo.ProtudoTipo" target="py.com.datapar.maestro.domain.commons.model.vo.BaseEnum">
+      <point x="0.0" y="-114.5" />
+      <point x="3547.679166666667" y="123.0" />
+      <point x="3016.116621071829" y="123.0" />
+      <point x="9.8125" y="36.5" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.ConteudoDb" target="py.com.datapar.maestro.domain.entrega.model.Conteudo">
+      <point x="-76.75" y="-37.0" />
+      <point x="2219.941621071829" y="1593.0" />
+      <point x="1727.9155618686864" y="1593.0" />
+      <point x="37.875" y="14.5" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.produto.model.PlanoEntrega" target="py.com.datapar.maestro.domain.produto.model.PlanoEntregaClassificador">
+      <point x="0.0" y="-81.0" />
+      <point x="1928.5405618686864" y="1264.0" />
+      <point x="1882.7541210718289" y="1264.0" />
+      <point x="-156.0" y="103.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.Conteudo" target="py.com.datapar.maestro.domain.commons.model.EntityWithIdentity">
+      <point x="0.0" y="-14.5" />
+      <point x="1690.0405618686864" y="722.0" />
+      <point x="2425.924954405162" y="722.0" />
+      <point x="-88.26666666666688" y="125.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.commons.model.vo.TipoServidor" target="py.com.datapar.maestro.domain.commons.model.vo.BaseEnum">
+      <point x="0.0" y="-92.5" />
+      <point x="3987.491621071829" y="103.0" />
+      <point x="3055.366621071829" y="103.0" />
+      <point x="49.0625" y="36.5" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.Entrega" target="py.com.datapar.maestro.domain.produto.model.PlanoEntrega">
+      <point x="176.25" y="-158.0" />
+      <point x="1072.4002490179596" y="1613.0" />
+      <point x="1816.5405618686864" y="1613.0" />
+      <point x="-112.0" y="81.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.EstagioExecucaoEntrega" target="py.com.datapar.maestro.domain.commons.model.vo.EstagioExecucaoEstado">
+      <point x="-225.60000000000014" y="-136.0" />
+      <point x="371.52912107182874" y="2195.0" />
+      <point x="346.50000000000045" y="2195.0" />
+      <point x="0.0" y="114.5" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.produto.model.Produto" target="py.com.datapar.maestro.domain.commons.model.EntityWithIdentity">
+      <point x="159.5454545454545" y="-246.0" />
+      <point x="3354.88493265993" y="732.0" />
+      <point x="2580.391621071829" y="732.0" />
+      <point x="66.19999999999982" y="125.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.commons.model.vo.DeliveryOrderAlvoEstado" target="py.com.datapar.maestro.domain.commons.model.vo.BaseEnum">
+      <point x="0.0" y="-103.5" />
+      <point x="4222.491621071829" y="93.0" />
+      <point x="3074.991621071829" y="93.0" />
+      <point x="68.6875" y="36.5" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.DeliveryOrderAlvoServico" target="py.com.datapar.maestro.domain.entrega.model.DeliveryOrder">
+      <point x="0.0" y="103.0" />
+      <point x="4018.3249544051628" y="1003.0" />
+      <point x="4039.690561868687" y="1003.0" />
+      <point x="130.33333333333394" y="-103.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.cliente.model" target="py.com.datapar.maestro.domain.produto.model.Produto">
+      <point x="-28.25" y="-14.5" />
+      <point x="3345.579166666667" y="2175.0" />
+      <point x="2999.816621071829" y="2175.0" />
+      <point x="-195.0" y="246.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.produto.model.Produto" target="py.com.datapar.maestro.domain.produto.model.ProdutoAppVersao">
+      <point x="-159.5454545454545" y="-246.0" />
+      <point x="3035.2711665263746" y="1563.0" />
+      <point x="2567.691621071829" y="1563.0" />
+      <point x="53.5" y="103.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.produto.model.PlanoEntregaClassificador" target="py.com.datapar.maestro.domain.produto.model.PlanoEntrega">
+      <point x="0.0" y="103.0" />
+      <point x="2038.7541210718289" y="1264.0" />
+      <point x="2040.5405618686864" y="1264.0" />
+      <point x="112.0" y="-81.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.EstagioExecucaoEntrega" target="py.com.datapar.maestro.domain.commons.model.EntityWithIdentity">
+      <point x="-112.79999999999995" y="-136.0" />
+      <point x="484.3291210718289" y="2165.0" />
+      <point x="650.6502490179596" y="2165.0" />
+      <point x="650.6502490179596" y="692.0" />
+      <point x="2359.7249544051624" y="692.0" />
+      <point x="-154.4666666666667" y="125.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.Entrega" target="py.com.datapar.maestro.domain.entrega.model.Conteudo">
+      <point x="58.75" y="-158.0" />
+      <point x="954.9002490179596" y="1593.0" />
+      <point x="1652.1655618686864" y="1593.0" />
+      <point x="-37.875" y="14.5" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.produto.model.PlanoEntrega" target="py.com.datapar.maestro.domain.commons.model.EntityWithIdentity">
+      <point x="-112.0" y="-81.0" />
+      <point x="1816.5405618686864" y="1264.0" />
+      <point x="1794.2541210718289" y="1264.0" />
+      <point x="1794.2541210718289" y="732.0" />
+      <point x="2447.9916210718293" y="732.0" />
+      <point x="-66.19999999999982" y="125.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.produto.model.ProdutoAppVersao" target="py.com.datapar.maestro.domain.produto.model.Produto">
+      <point x="160.5" y="103.0" />
+      <point x="2674.691621071829" y="1553.0" />
+      <point x="3088.4529847081926" y="1553.0" />
+      <point x="-106.36363636363649" y="-246.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.Entrega" target="py.com.datapar.maestro.domain.entrega.model.EstagioExecucaoEntrega">
+      <point x="0.0" y="158.0" />
+      <point x="896.1502490179596" y="2185.0" />
+      <point x="709.9291210718288" y="2185.0" />
+      <point x="112.79999999999995" y="-136.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.produto.model.Produto" target="py.com.datapar.maestro.domain.produto.model.ProdutoDbRevision">
+      <point x="-53.18181818181802" y="-246.0" />
+      <point x="3141.634802890011" y="1543.0" />
+      <point x="2987.566621071829" y="1543.0" />
+      <point x="47.875" y="81.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.EntregaAlvo" target="py.com.datapar.maestro.domain.commons.model.vo.EntregaAlvoEstado">
+      <point x="-174.16666666666674" y="-103.0" />
+      <point x="943.2250000000001" y="2626.0" />
+      <point x="105.5" y="2626.0" />
+      <point x="0.0" y="103.5" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.Entrega" target="py.com.datapar.maestro.domain.commons.model.vo.EntregaEstado">
+      <point x="-176.25" y="-158.0" />
+      <point x="719.9002490179596" y="1613.0" />
+      <point x="597.5000000000005" y="1613.0" />
+      <point x="0.0" y="114.5" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.cliente.model" target="py.com.datapar.maestro.domain.produto.model.ProdutoDbRevision">
+      <point x="-39.55000000000018" y="-14.5" />
+      <point x="3334.2791666666667" y="2185.0" />
+      <point x="2891.816621071829" y="2185.0" />
+      <point x="-47.875" y="81.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.dto.EntregaDTO" target="py.com.datapar.maestro.domain.entrega.model.Entrega">
+      <point x="0.0" y="-180.5" />
+      <point x="1129.6291210718289" y="2185.0" />
+      <point x="1052.8169156846263" y="2185.0" />
+      <point x="156.66666666666674" y="158.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.commons.model.vo.EntregaAlvoEstado" target="py.com.datapar.maestro.domain.commons.model.vo.BaseEnum">
+      <point x="0.0" y="-103.5" />
+      <point x="105.5" y="93.0" />
+      <point x="2937.616621071829" y="93.0" />
+      <point x="-68.6875" y="36.5" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.ConteudoApp" target="py.com.datapar.maestro.domain.entrega.model.Conteudo">
+      <point x="-77.25" y="-37.0" />
+      <point x="1809.3791210718289" y="1603.0" />
+      <point x="1702.6655618686864" y="1603.0" />
+      <point x="12.625" y="14.5" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.produto.model.PlanoEntrega" target="py.com.datapar.maestro.domain.produto.model.Produto">
+      <point x="112.0" y="81.0" />
+      <point x="2040.5405618686864" y="1573.0" />
+      <point x="2982.0893483445566" y="1573.0" />
+      <point x="-212.72727272727252" y="-246.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.EntregaAlvo" target="py.com.datapar.maestro.domain.entrega.model.EstagioExecucaoEntrega">
+      <point x="-104.5" y="-103.0" />
+      <point x="1012.8916666666669" y="2616.0" />
+      <point x="456.1291210718289" y="2616.0" />
+      <point x="-141.0" y="136.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.commons.model.vo.BancoUtilizado" target="py.com.datapar.maestro.domain.commons.model.vo.BaseEnum">
+      <point x="0.0" y="-114.5" />
+      <point x="3673.679166666667" y="113.0" />
+      <point x="3035.741621071829" y="113.0" />
+      <point x="29.4375" y="36.5" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.produto.model.ProdutoAppVersao" target="py.com.datapar.maestro.domain.commons.model.EntityWithIdentity">
+      <point x="0.0" y="-103.0" />
+      <point x="0.0" y="125.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.commons.model.EntityWithIdentity" target="py.com.datapar.maestro.domain.commons.model.Identity">
+      <point x="82.75" y="-125.0" />
+      <point x="2596.941621071829" y="397.0" />
+      <point x="2594.441621071829" y="397.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.produto.model.ClassificadorEntrega" target="py.com.datapar.maestro.domain.produto.model.Produto">
+      <point x="116.33333333333348" y="81.0" />
+      <point x="3286.2182659932637" y="1003.0" />
+      <point x="3252.978658108869" y="1003.0" />
+      <point x="3252.978658108869" y="1603.0" />
+      <point x="3301.1802574354656" y="1603.0" />
+      <point x="106.36363636363649" y="-246.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.produto.model.PlanoEntregaClassificador" target="py.com.datapar.maestro.domain.produto.model.ClassificadorEntrega">
+      <point x="117.00000000000023" y="-103.0" />
+      <point x="2155.754121071829" y="1003.0" />
+      <point x="3053.5515993265967" y="1003.0" />
+      <point x="-116.33333333333348" y="81.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.cliente.model" target="py.com.datapar.maestro.domain.cliente.model">
+      <point x="-14.125" y="14.5" />
+      <point x="3359.704166666667" y="2440.0" />
+      <point x="3287.329166666667" y="2440.0" />
+      <point x="3287.329166666667" y="2388.25" />
+      <point x="-56.5" y="-7.25" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.DeliveryOrder" target="py.com.datapar.maestro.domain.commons.model.EntityWithIdentity">
+      <point x="-130.33333333333303" y="-103.0" />
+      <point x="3779.02389520202" y="1003.0" />
+      <point x="3531.2302258698096" y="1003.0" />
+      <point x="3531.2302258698096" y="702.0" />
+      <point x="2646.591621071829" y="702.0" />
+      <point x="132.4000000000001" y="125.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.commons.model.vo.EstagioExecucaoEstado" target="py.com.datapar.maestro.domain.commons.model.vo.BaseEnum">
+      <point x="0.0" y="-114.5" />
+      <point x="346.50000000000045" y="103.0" />
+      <point x="2957.241621071829" y="103.0" />
+      <point x="-49.0625" y="36.5" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.produto.model.Produto" target="py.com.datapar.maestro.domain.produto.model.ClassificadorEntrega">
+      <point x="53.18181818181802" y="-246.0" />
+      <point x="3247.998439253647" y="1613.0" />
+      <point x="3206.8549558080804" y="1613.0" />
+      <point x="3206.8549558080804" y="1003.0" />
+      <point x="3169.88493265993" y="1003.0" />
+      <point x="0.0" y="81.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.EntregaAlvo" target="py.com.datapar.maestro.domain.commons.model.EntityWithIdentity">
+      <point x="34.83333333333326" y="-103.0" />
+      <point x="1152.2250000000001" y="2596.0" />
+      <point x="1370.6291210718289" y="2596.0" />
+      <point x="1370.6291210718289" y="712.0" />
+      <point x="2403.8582877384956" y="712.0" />
+      <point x="-110.33333333333348" y="125.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.EntregaAlvo" target="py.com.datapar.maestro.domain.entrega.model.DeliveryOrder">
+      <point x="174.16666666666674" y="-103.0" />
+      <point x="1291.5583333333336" y="2626.0" />
+      <point x="3898.991621071829" y="2626.0" />
+      <point x="3898.991621071829" y="1264.0" />
+      <point x="4039.6905618686865" y="1264.0" />
+      <point x="130.33333333333348" y="103.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.produto.model.Produto" target="py.com.datapar.maestro.domain.commons.model.vo.BancoUtilizado">
+      <point x="265.909090909091" y="-246.0" />
+      <point x="3460.72571198092" y="1613.0" />
+      <point x="3615.929166666667" y="1613.0" />
+      <point x="-57.75" y="114.5" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.EstagioExecucaoEntrega" target="py.com.datapar.maestro.domain.entrega.model.Entrega">
+      <point x="0.0" y="-136.0" />
+      <point x="597.1291210718289" y="2175.0" />
+      <point x="739.4835823512931" y="2175.0" />
+      <point x="-156.66666666666663" y="158.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.produto.model.Produto" target="py.com.datapar.maestro.domain.cliente.model">
+      <point x="195.0000000000001" y="246.0" />
+      <point x="3389.816621071829" y="2145.0" />
+      <point x="3368.179166666667" y="2145.0" />
+      <point x="-5.650000000000091" y="-14.5" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.cliente.model" target="py.com.datapar.maestro.domain.produto.model.ProdutoAppVersao">
+      <point x="-50.84999999999991" y="-14.5" />
+      <point x="3322.979166666667" y="2195.0" />
+      <point x="2460.691621071829" y="2195.0" />
+      <point x="-53.5" y="103.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.commons.model.vo.Situation" target="py.com.datapar.maestro.domain.commons.model.vo.BaseEnum">
+      <point x="0.0" y="-81.5" />
+      <point x="2433.941621071829" y="123.0" />
+      <point x="2996.491621071829" y="123.0" />
+      <point x="-9.8125" y="36.5" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.commons.model.Usuario" target="py.com.datapar.maestro.domain.commons.model.EntityWithIdentity">
+      <point x="0.0" y="-37.0" />
+      <point x="2279.0166666666673" y="752.0" />
+      <point x="2492.1249544051625" y="752.0" />
+      <point x="-22.066666666666606" y="125.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.produto.model.ClassificadorEntrega" target="py.com.datapar.maestro.domain.commons.model.EntityWithIdentity">
+      <point x="0.0" y="-81.0" />
+      <point x="3169.88493265993" y="742.0" />
+      <point x="2558.3249544051623" y="742.0" />
+      <point x="44.13333333333321" y="125.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.ConteudoApp" target="py.com.datapar.maestro.domain.produto.model.ProdutoAppVersao">
+      <point x="77.25" y="-37.0" />
+      <point x="1963.8791210718289" y="1613.0" />
+      <point x="2353.691621071829" y="1613.0" />
+      <point x="-160.5" y="103.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.ConteudoCommand" target="py.com.datapar.maestro.domain.entrega.model.Conteudo">
+      <point x="0.0" y="-37.0" />
+      <point x="1546.6291210718289" y="1603.0" />
+      <point x="1677.4155618686864" y="1603.0" />
+      <point x="-12.625" y="14.5" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.EstagioExecucaoEntrega" target="py.com.datapar.maestro.domain.entrega.model.EntregaAlvo">
+      <point x="141.0" y="136.0" />
+      <point x="738.1291210718289" y="2606.0" />
+      <point x="1082.5583333333336" y="2606.0" />
+      <point x="-34.83333333333326" y="-103.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.DeliveryOrderAlvoServico" target="py.com.datapar.maestro.domain.commons.model.vo.TipoServidor">
+      <point x="-4.547473508864641E-13" y="-103.0" />
+      <point x="4018.3249544051623" y="752.0" />
+      <point x="3987.491621071829" y="752.0" />
+      <point x="0.0" y="92.5" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.cliente.model" target="py.com.datapar.maestro.domain.commons.model.vo.BancoUtilizado">
+      <point x="16.949999999999704" y="-14.5" />
+      <point x="3390.7791666666667" y="2165.0" />
+      <point x="3731.429166666667" y="2165.0" />
+      <point x="57.75" y="114.5" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.DeliveryOrderAlvoServico" target="py.com.datapar.maestro.domain.commons.model.vo.DeliveryOrderAlvoEstado">
+      <point x="173.33333333333258" y="-103.0" />
+      <point x="4191.658287738495" y="752.0" />
+      <point x="4222.491621071829" y="752.0" />
+      <point x="0.0" y="103.5" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.commons.model.vo.EntregaEstado" target="py.com.datapar.maestro.domain.commons.model.vo.BaseEnum">
+      <point x="0.0" y="-114.5" />
+      <point x="597.5000000000005" y="113.0" />
+      <point x="2976.866621071829" y="113.0" />
+      <point x="-29.4375" y="36.5" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.commons.model.MaestroAppConfig" target="py.com.datapar.maestro.domain.commons.model.EntityWithIdentity">
+      <point x="88.25" y="-59.0" />
+      <point x="3516.766666666667" y="2616.0" />
+      <point x="3520.2302258698096" y="2616.0" />
+      <point x="3520.2302258698096" y="712.0" />
+      <point x="2624.5249544051626" y="712.0" />
+      <point x="110.33333333333348" y="125.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.produto.model.PlanoEntregaClassificador" target="py.com.datapar.maestro.domain.commons.model.EntityWithIdentity">
+      <point x="-116.99999999999977" y="-103.0" />
+      <point x="1921.754121071829" y="742.0" />
+      <point x="2470.058287738496" y="742.0" />
+      <point x="-44.13333333333321" y="125.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.commons.model.MaestroAppConfig" target="py.com.datapar.maestro.domain.cliente.model">
+      <point x="-88.25" y="-59.0" />
+      <point x="3340.266666666667" y="2616.0" />
+      <point x="3416.204166666667" y="2616.0" />
+      <point x="42.375" y="14.5" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.EstagioExecucaoEntrega" target="py.com.datapar.maestro.domain.produto.model.PlanoEntregaClassificador">
+      <point x="225.60000000000014" y="-136.0" />
+      <point x="822.729121071829" y="2195.0" />
+      <point x="2132.691621071829" y="2195.0" />
+      <point x="2132.691621071829" y="1264.0" />
+      <point x="2194.754121071829" y="1264.0" />
+      <point x="156.00000000000023" y="103.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.DeliveryOrder" target="py.com.datapar.maestro.domain.entrega.model.DeliveryOrderAlvoServico">
+      <point x="4.547473508864641E-13" y="-103.0" />
+      <point x="3909.3572285353534" y="1003.0" />
+      <point x="3844.9916210718293" y="1003.0" />
+      <point x="-173.33333333333348" y="103.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.commons.model.EntityWithIdentity" target="py.com.datapar.maestro.domain.commons.model.vo.Situation">
+      <point x="-82.75" y="-125.0" />
+      <point x="2431.441621071829" y="397.0" />
+      <point x="2433.941621071829" y="397.0" />
+      <point x="0.0" y="81.5" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.DeliveryOrder" target="py.com.datapar.maestro.domain.cliente.model">
+      <point x="-130.33333333333348" y="103.0" />
+      <point x="3779.0238952020195" y="1264.0" />
+      <point x="3858.099705387203" y="1264.0" />
+      <point x="3858.099705387203" y="2175.0" />
+      <point x="3402.079166666667" y="2175.0" />
+      <point x="28.249999999999886" y="-14.5" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.DeliveryOrderAlvoServico" target="py.com.datapar.maestro.domain.cliente.model">
+      <point x="173.33333333333348" y="103.0" />
+      <point x="4191.658287738496" y="1003.0" />
+      <point x="4115.357228535353" y="1003.0" />
+      <point x="4115.357228535353" y="2195.0" />
+      <point x="3424.679166666667" y="2195.0" />
+      <point x="50.849999999999795" y="-14.5" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.DeliveryOrderAlvoServico" target="py.com.datapar.maestro.domain.commons.model.EntityWithIdentity">
+      <point x="-173.33333333333394" y="-103.0" />
+      <point x="3844.991621071829" y="692.0" />
+      <point x="2668.658287738496" y="692.0" />
+      <point x="154.4666666666667" y="125.0" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.produto.model.Produto" target="py.com.datapar.maestro.domain.commons.model.vo.ProtudoTipo">
+      <point x="212.72727272727263" y="-246.0" />
+      <point x="3407.5438937991016" y="1603.0" />
+      <point x="3547.679166666667" y="1603.0" />
+      <point x="0.0" y="114.5" />
+    </edge>
+    <edge source="py.com.datapar.maestro.domain.entrega.model.ConteudoDb" target="py.com.datapar.maestro.domain.produto.model.ProdutoDbRevision">
+      <point x="76.75" y="-37.0" />
+      <point x="2373.441621071829" y="1613.0" />
+      <point x="2796.066621071829" y="1613.0" />
+      <point x="-143.625" y="81.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.7036211699164345" x="1405.5891992134236" y="902.422886161421" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

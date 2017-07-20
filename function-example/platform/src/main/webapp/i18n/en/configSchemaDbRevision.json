@@ -1,0 +1,23 @@
+{
+    "platform": {
+        "configSchemaDbRevision" : {
+            "home": {
+                "title": "Config Schema Db Revisions",
+                "createLabel": "Create a new Config Schema Db Revision",
+                "createOrEditLabel": "Create or edit a Config Schema Db Revision"
+            },
+            "created": "A new Config Schema Db Revision is created with identifier {{ param }}",
+            "updated": "A Config Schema Db Revision is updated with identifier {{ param }}",
+            "deleted": "A Config Schema Db Revision is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Config Schema Db Revision {{ id }}?"
+            },
+            "detail": {
+                "title": "Config Schema Db Revision"
+            },
+            "dataUpdated": "Data Updated",
+            "produtoDbRevision": "Produto Db Revision",
+            "configSchema": "Config Schema"
+        }
+    }
+}

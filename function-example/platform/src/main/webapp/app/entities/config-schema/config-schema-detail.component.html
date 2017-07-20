@@ -1,0 +1,65 @@
+
+<div *ngIf="configSchema">
+    <h2><span jhiTranslate="platform.configSchema.detail.title">Config Schema</span> {{configSchema.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="platform.configSchema.schemaName">Schema Name</span></dt>
+        <dd>
+            <span>{{configSchema.schemaName}}</span>
+        </dd>
+        <dt><span jhiTranslate="platform.configSchema.schemaTestEnabled">Schema Test Enabled</span></dt>
+        <dd>
+            <span>{{configSchema.schemaTestEnabled}}</span>
+        </dd>
+        <dt><span jhiTranslate="platform.configSchema.latestAppRevision">Latest App Revision</span></dt>
+        <dd>
+            <div *ngIf="configSchema.latestAppRevision">
+                <a [routerLink]="['/config-schema-app-revision', configSchema.latestAppRevision?.id]">{{configSchema.latestAppRevision?.id}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="platform.configSchema.latestDbRevision">Latest Db Revision</span></dt>
+        <dd>
+            <div *ngIf="configSchema.latestDbRevision">
+                <a [routerLink]="['/config-schema-db-revision', configSchema.latestDbRevision?.id]">{{configSchema.latestDbRevision?.id}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="platform.configSchema.servicoAPP">Servico APP</span></dt>
+        <dd>
+            <div *ngIf="configSchema.servicoAPP">
+                <a [routerLink]="['/servico-app', configSchema.servicoAPP?.id]">{{configSchema.servicoAPP?.id}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="platform.configSchema.produto">Produto</span></dt>
+        <dd>
+            <div *ngIf="configSchema.produto">
+                <a [routerLink]="['/produto', configSchema.produto?.id]">{{configSchema.produto?.id}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="platform.configSchema.filial">Filial</span></dt>
+        <dd>
+            <div *ngIf="configSchema.filial">
+                <a [routerLink]="['/filial', configSchema.filial?.id]">{{configSchema.filial?.id}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="platform.configSchema.servicoDB">Servico DB</span></dt>
+        <dd>
+            <div *ngIf="configSchema.servicoDB">
+                <a [routerLink]="['/servico-db', configSchema.servicoDB?.id]">{{configSchema.servicoDB?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'config-schema/'+ configSchema.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

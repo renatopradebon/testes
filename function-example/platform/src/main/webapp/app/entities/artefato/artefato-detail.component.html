@@ -1,0 +1,41 @@
+
+<div *ngIf="artefato">
+    <h2><span jhiTranslate="platform.artefato.detail.title">Artefato</span> {{artefato.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="platform.artefato.nome">Nome</span></dt>
+        <dd>
+            <span>{{artefato.nome}}</span>
+        </dd>
+        <dt><span jhiTranslate="platform.artefato.extensao">Extensao</span></dt>
+        <dd>
+            <span>{{artefato.extensao}}</span>
+        </dd>
+        <dt><span jhiTranslate="platform.artefato.fileUri">File Uri</span></dt>
+        <dd>
+            <span>{{artefato.fileUri}}</span>
+        </dd>
+        <dt><span jhiTranslate="platform.artefato.versao">Versao</span></dt>
+        <dd>
+            <span>{{artefato.versao}}</span>
+        </dd>
+        <dt><span jhiTranslate="platform.artefato.sha1">Sha1</span></dt>
+        <dd>
+            <span>{{artefato.sha1}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'artefato/'+ artefato.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.omnifaces:javax.security-api:1.0-m01-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/omnifaces/javax.security-api/1.0-m01-SNAPSHOT/javax.security-api-1.0-m01-20160205.223520-1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/omnifaces/javax.security-api/1.0-m01-SNAPSHOT/javax.security-api-1.0-m01-20160205.223520-1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/omnifaces/javax.security-api/1.0-m01-SNAPSHOT/javax.security-api-1.0-m01-20160205.223520-1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

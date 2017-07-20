@@ -1,0 +1,76 @@
+<div>
+    <h2>
+        <span jhiTranslate="platform.configSchemaDbRevision.home.title">Config Schema Db Revisions</span>
+        <button class="btn btn-primary float-right create-config-schema-db-revision" [routerLink]="['/', { outlets: { popup: ['config-schema-db-revision-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="platform.configSchemaDbRevision.home.createLabel">
+            Create new Config Schema Db Revision
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="configSchemaDbRevisions">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="dataUpdated"><span jhiTranslate="platform.configSchemaDbRevision.dataUpdated">Data Updated</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="produtoDbRevision.id"><span jhiTranslate="platform.configSchemaDbRevision.produtoDbRevision">Produto Db Revision</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="configSchema.id"><span jhiTranslate="platform.configSchemaDbRevision.configSchema">Config Schema</span> <span class="fa fa-sort"></span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let configSchemaDbRevision of configSchemaDbRevisions ;trackBy: trackId">
+                <td><a [routerLink]="['../config-schema-db-revision', configSchemaDbRevision.id ]">{{configSchemaDbRevision.id}}</a></td>
+                <td>{{configSchemaDbRevision.dataUpdated}}</td>
+                <td>
+                    <div *ngIf="configSchemaDbRevision.produtoDbRevision">
+                        <a [routerLink]="['../produto-db-revision', configSchemaDbRevision.produtoDbRevision?.id ]" >{{configSchemaDbRevision.produtoDbRevision?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="configSchemaDbRevision.configSchema">
+                        <a [routerLink]="['../config-schema', configSchemaDbRevision.configSchema?.id ]" >{{configSchemaDbRevision.configSchema?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../config-schema-db-revision', configSchemaDbRevision.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'config-schema-db-revision/'+ configSchemaDbRevision.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'config-schema-db-revision/'+ configSchemaDbRevision.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+        <div *ngIf="configSchemaDbRevisions && configSchemaDbRevisions.length">
+            <div class="row justify-content-center">
+                <jhi-item-count [page]="page" [total]="queryCount" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+            </div>
+            <div class="row justify-content-center">
+                <ngb-pagination [collectionSize]="totalItems" [(page)]="page" (pageChange)="loadPage(page)"></ngb-pagination>
+            </div>
+        </div>
+</div>

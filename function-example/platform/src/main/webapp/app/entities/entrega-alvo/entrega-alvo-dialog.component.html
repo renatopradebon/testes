@@ -1,0 +1,70 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myEntregaAlvoLabel" jhiTranslate="platform.entregaAlvo.home.createOrEditLabel">Create or edit a Entrega Alvo</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!entregaAlvo.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="entregaAlvo.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="platform.entregaAlvo.requerAutorizacao" for="field_requerAutorizacao">Requer Autorizacao</label>
+            <input type="checkbox" class="form-control" name="requerAutorizacao" id="field_requerAutorizacao"
+                [(ngModel)]="entregaAlvo.requerAutorizacao"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="platform.entregaAlvo.autorizado" for="field_autorizado">Autorizado</label>
+            <input type="checkbox" class="form-control" name="autorizado" id="field_autorizado"
+                [(ngModel)]="entregaAlvo.autorizado"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="platform.entregaAlvo.autorizadoPor" for="field_autorizadoPor">Autorizado Por</label>
+            <input type="text" class="form-control" name="autorizadoPor" id="field_autorizadoPor"
+                [(ngModel)]="entregaAlvo.autorizadoPor"
+             />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="platform.entregaAlvo.dataAgendamento" for="field_dataAgendamento">Data Agendamento</label>
+            <input type="text" class="form-control" name="dataAgendamento" id="field_dataAgendamento"
+                [(ngModel)]="entregaAlvo.dataAgendamento"
+             />
+        </div>
+
+        <div class="form-group">
+            <label jhiTranslate="platform.entregaAlvo.empresa" for="field_empresa">Empresa</label>
+            <select class="form-control" id="field_empresa" name="empresa" [(ngModel)]="entregaAlvo.empresa">
+                <option [ngValue]="null"></option>
+                <option [ngValue]="empresaOption.id === entregaAlvo.empresa?.id ? entregaAlvo.empresa : empresaOption" *ngFor="let empresaOption of empresas; trackBy: trackEmpresaById">{{empresaOption.id}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label jhiTranslate="platform.entregaAlvo.deliveryOrder" for="field_deliveryOrder">Delivery Order</label>
+            <select class="form-control" id="field_deliveryOrder" name="deliveryOrder" [(ngModel)]="entregaAlvo.deliveryOrder">
+                <option [ngValue]="null"></option>
+                <option [ngValue]="deliveryOrderOption.id === entregaAlvo.deliveryOrder?.id ? entregaAlvo.deliveryOrder : deliveryOrderOption" *ngFor="let deliveryOrderOption of deliveryorders; trackBy: trackDeliveryOrderById">{{deliveryOrderOption.id}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label jhiTranslate="platform.entregaAlvo.estagio" for="field_estagio">Estagio</label>
+            <select class="form-control" id="field_estagio" name="estagio" [(ngModel)]="entregaAlvo.estagio" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="estagioExecucaoEntregaOption.id === entregaAlvo.estagio?.id ? entregaAlvo.estagio : estagioExecucaoEntregaOption" *ngFor="let estagioExecucaoEntregaOption of estagioexecucaoentregas; trackBy: trackEstagioExecucaoEntregaById">{{estagioExecucaoEntregaOption.id}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

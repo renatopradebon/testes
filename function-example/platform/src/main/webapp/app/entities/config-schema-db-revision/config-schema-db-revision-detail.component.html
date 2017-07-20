@@ -1,0 +1,37 @@
+
+<div *ngIf="configSchemaDbRevision">
+    <h2><span jhiTranslate="platform.configSchemaDbRevision.detail.title">Config Schema Db Revision</span> {{configSchemaDbRevision.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="platform.configSchemaDbRevision.dataUpdated">Data Updated</span></dt>
+        <dd>
+            <span>{{configSchemaDbRevision.dataUpdated}}</span>
+        </dd>
+        <dt><span jhiTranslate="platform.configSchemaDbRevision.produtoDbRevision">Produto Db Revision</span></dt>
+        <dd>
+            <div *ngIf="configSchemaDbRevision.produtoDbRevision">
+                <a [routerLink]="['/produto-db-revision', configSchemaDbRevision.produtoDbRevision?.id]">{{configSchemaDbRevision.produtoDbRevision?.id}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="platform.configSchemaDbRevision.configSchema">Config Schema</span></dt>
+        <dd>
+            <div *ngIf="configSchemaDbRevision.configSchema">
+                <a [routerLink]="['/config-schema', configSchemaDbRevision.configSchema?.id]">{{configSchemaDbRevision.configSchema?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'config-schema-db-revision/'+ configSchemaDbRevision.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

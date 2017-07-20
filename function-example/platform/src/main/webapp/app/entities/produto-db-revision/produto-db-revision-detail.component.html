@@ -1,0 +1,35 @@
+
+<div *ngIf="produtoDbRevision">
+    <h2><span jhiTranslate="platform.produtoDbRevision.detail.title">Produto Db Revision</span> {{produtoDbRevision.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="platform.produtoDbRevision.revisaoBanco">Revisao Banco</span></dt>
+        <dd>
+            <span>{{produtoDbRevision.revisaoBanco}}</span>
+        </dd>
+        <dt><span jhiTranslate="platform.produtoDbRevision.ordemExecucao">Ordem Execucao</span></dt>
+        <dd>
+            <span>{{produtoDbRevision.ordemExecucao}}</span>
+        </dd>
+        <dt><span jhiTranslate="platform.produtoDbRevision.produto">Produto</span></dt>
+        <dd>
+            <div *ngIf="produtoDbRevision.produto">
+                <a [routerLink]="['/produto', produtoDbRevision.produto?.id]">{{produtoDbRevision.produto?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'produto-db-revision/'+ produtoDbRevision.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

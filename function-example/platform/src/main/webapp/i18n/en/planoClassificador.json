@@ -1,0 +1,24 @@
+{
+    "platform": {
+        "planoClassificador" : {
+            "home": {
+                "title": "Plano Classificadors",
+                "createLabel": "Create a new Plano Classificador",
+                "createOrEditLabel": "Create or edit a Plano Classificador"
+            },
+            "created": "A new Plano Classificador is created with identifier {{ param }}",
+            "updated": "A Plano Classificador is updated with identifier {{ param }}",
+            "deleted": "A Plano Classificador is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Plano Classificador {{ id }}?"
+            },
+            "detail": {
+                "title": "Plano Classificador"
+            },
+            "queryEmpresas": "Query Empresas",
+            "ordemExecucao": "Ordem Execucao",
+            "nomeClassificador": "Nome Classificador",
+            "plano": "Plano"
+        }
+    }
+}

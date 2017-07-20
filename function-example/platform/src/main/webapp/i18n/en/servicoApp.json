@@ -1,0 +1,24 @@
+{
+    "platform": {
+        "servicoApp" : {
+            "home": {
+                "title": "Servico Apps",
+                "createLabel": "Create a new Servico App",
+                "createOrEditLabel": "Create or edit a Servico App"
+            },
+            "created": "A new Servico App is created with identifier {{ param }}",
+            "updated": "A Servico App is updated with identifier {{ param }}",
+            "deleted": "A Servico App is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Servico App {{ id }}?"
+            },
+            "detail": {
+                "title": "Servico App"
+            },
+            "apptoken": "Apptoken",
+            "hostPort": "Host Port",
+            "hostConsolePort": "Host Console Port",
+            "configSchema": "Config Schema"
+        }
+    }
+}
